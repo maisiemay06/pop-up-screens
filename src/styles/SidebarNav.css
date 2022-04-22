@@ -1,0 +1,94 @@
+/* SIDEBAR */
+.sidebar-nav {
+  background-color: var(--white);
+  color: #757A7F;
+  font-weight: 500;
+  width: 230px;
+  height: 100%;
+  z-index: 11;
+  position: fixed;
+  margin-top: -76px;
+}
+
+.sidebar-nav .logo {
+  width: 125px;
+  margin: 20px;
+}
+
+.sidebar-nav ul {
+  margin-left: 30px;
+}
+
+.sidebar-nav li {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-block: 0;
+  margin-left: -15px;
+  width: 168px;
+  padding: 6px 11px;
+  border-radius: 50px;
+  transition: 0.3s ease-out;
+}
+
+.sidebar-nav li:hover {
+  background-color: #f0f5fd;
+}
+
+/* SIDEBAR FOOTER */
+.sidebar-footer {
+  position: fixed;
+  bottom: 10px;
+  width: 229px;
+}
+
+.sidebar-footer .button {
+  color: var(--white);
+  width: 148px;
+  height: 38px;
+  border: none;
+  border-radius: 50px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 15px;
+  transition: 0.3s ease-out
+}
+
+.sidebar-footer .tool-tips-btn {
+  background-color: var(--accent-blue);
+}
+.sidebar-footer .tool-tips-btn:hover {
+  background-color: #04CCCC;
+}
+.sidebar-footer .cam-mic-test-btn {
+  background-color: var(--main-blue);
+}
+.sidebar-footer .cam-mic-test-btn:hover {
+  background-color: #182AC6;
+}
+
+.sidebar-footer .nav-list li {
+  padding-block: 6px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1400px) {
+  .sidebar-nav,
+  .sidebar-footer {
+    width: 190px;
+  }
+  .sidebar-nav .logo {
+    width: 115px;
+    margin: 32px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar-nav .logo {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: none;
+  }
+}
