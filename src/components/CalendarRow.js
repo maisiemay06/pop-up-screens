@@ -10,6 +10,7 @@ export default function CalendarRow({ time, openPopup }) {
   function handleClick(event) {
     event.preventDefault();
     openPopup();
+    event.target.classList.toggle("open-slot");
     event.target.classList.toggle("booked");
   }
 
@@ -20,54 +21,40 @@ export default function CalendarRow({ time, openPopup }) {
         className="col border-top border-right book-slot"
         onClick={handleClick}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
         onClick={openPopup}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
         onClick={openPopup}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
         onClick={openPopup}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
         onClick={openPopup}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
         onClick={openPopup}
       >
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
       <div className="col border-top book-slot" onClick={openPopup}>
-        <a href="">
-          <FaPlusCircle className="plus-icon" />
-        </a>
+        <a href="" className="open-slot"></a>
       </div>
     </div>
   );

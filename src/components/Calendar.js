@@ -28,8 +28,8 @@ export default function Calendar() {
       {open && <BookedMeeow closePopup={closePopup} />}
 
       <div className="week-picker">
-        <MdArrowBackIosNew />
-        <MdArrowForwardIos />
+        <MdArrowBackIosNew id="prev-week" />
+        <MdArrowForwardIos id="next-week" />
         <h4>April 2022</h4>
       </div>
       <div className="calendar container-fluid">
