@@ -62,19 +62,43 @@ li {
   }
 }
 
-.col-1 {
-  width: 216px;
-}
-
+/* CALENDAR FORMATTING */
 .row {
-  height: 35px;
+  height: 50px;
 }
 
-.main-row div {
-  border-top: 1px solid #70707030;
+.calendar .border-top {
+  border-top: 1.5px solid #ebedfd;
 }
-.calendar div {
-  border-right: 1px solid #70707030;
+.calendar .border-right {
+  border-right: 1.5px solid #ebedfd;
+}
+
+.calendar .date-header {
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.calendar .time-header {
+  color: var(--main-blue);
+  font-weight: 600;
+  padding-top: 10px;
+  border-top: none;
+}
+
+.calendar .date-header .date {
+  font-size: 1.7rem;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+}
+
+/* BOOK SLOT */
+.calendar .book-slot {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .calendar a {
@@ -82,7 +106,7 @@ li {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-top: 4px;
+  padding-top: 10px;
   color: #ebedfd;
   font-size: 1.3rem;
 }
@@ -99,6 +123,12 @@ li {
   margin-left: 5px;
 }
 
+.calendar .booked {
+  background-color: var(--main-blue);
+  color: #fff;
+}
+
+/* POPUP */
 .popup-bkgrnd {
   backdrop-filter: blur(10px);
   position: fixed;
@@ -127,7 +157,7 @@ li {
 }
 
 .popup-text {
-  margin-top: 35vh;
+  margin-top: 32vh;
   text-align: center;
 }
 
@@ -140,7 +170,8 @@ li {
 }
 
 .popup .emoji {
-  font-size: 5rem;
+  height: 100px;
+  margin-bottom: 10px;
 }
 .popup .popup-title {
   font-size: 3rem;

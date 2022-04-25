@@ -1,5 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
+import clappingEmoji from "../imgs/clapping-emoji.png";
 
 export default function BookedMeeow({ closePopup }) {
   return (
@@ -17,17 +18,17 @@ export default function BookedMeeow({ closePopup }) {
           scale: 0,
         }}
         animate={{
-          scale: [0, 1, 0.9],
+          scale: [1, 0.9],
         }}
         transition={{
           ease: "easeIn",
-          duration: 0.05,
+          duration: 0.3,
         }}
         className="popup"
       >
         <FaTimes id="close-btn" onClick={closePopup} />
         <motion.div className="popup-text">
-          <h1 className="emoji">&#x1F44F;</h1>
+          <img src={clappingEmoji} alt="clapping emoji" className="emoji" />
           <h2 className="popup-title">
             you <span className="underline">booked</span> a Meeow!
           </h2>
