@@ -1,10 +1,10 @@
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// MeeowStarting popup is linked to button for demo purposes only
-// This should be rendered when a user has the next Meeow is about to start and the user doesn't have it booked
+// BookedStarting popup is linked to button for demo purposes only
+// This should be rendered when a user has the next Meeow is about to start and the user has it booked
 
-export default function MeeowStarting({ closeMeeowStarting }) {
+export default function BookedStarting({ closeBookedStarting }) {
   return (
     <motion.div
       initial={{
@@ -28,15 +28,16 @@ export default function MeeowStarting({ closeMeeowStarting }) {
         }}
         className="popup"
       >
-        <FaTimes id="close-btn" onClick={closeMeeowStarting} />
+        <FaTimes id="close-btn" onClick={closeBookedStarting} />
         <motion.div className="popup-text">
           <h2 className="popup-title">
-            the next <span className="underline">Meeow</span> is about to start
+            your booked Meeow is{" "}
+            <span className="underline">starting now!</span>
           </h2>
           <h4 className="popup-subtitle">
             Click before 2 mins past the hour to be included
           </h4>
-          <button onClick={closeMeeowStarting} id="join-meeow-btn">
+          <button onClick={closeBookedStarting} id="join-meeow-btn">
             join this Meeow now
           </button>
         </motion.div>

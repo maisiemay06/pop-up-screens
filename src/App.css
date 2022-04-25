@@ -63,20 +63,23 @@ li {
 }
 
 /* WEEK PICKER */
+.week-picker {
+  margin-bottom: 20px;
+  color: var(--main-blue);
+}
+
 .week-picker #prev-week,
 #next-week {
   display: inline;
-  font-size: 1.14rem;
   vertical-align: text-bottom;
   margin-right: 10px;
-  color: var(--main-blue);
+  font-size: 1.14rem;
 }
 
 .week-picker h4 {
   display: inline;
-  font-size: 1.14rem;
   margin-left: 20px;
-  color: var(--main-blue);
+  font-size: 1.14rem;
 }
 
 /* CALENDAR FORMATTING */
@@ -244,4 +247,23 @@ li {
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 36px;
+}
+
+/* DEMO BUTTONS */
+.demo-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.demo-buttons button {
+  display: block;
+  width: 150px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--accent-blue);
+  border: none;
+  border-radius: 28px;
+  color: #fff;
 }

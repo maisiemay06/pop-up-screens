@@ -3,21 +3,54 @@ import BookedMeeow from "./BookedMeeow";
 import { useState } from "react";
 import CalendarRow from "./CalendarRow";
 import CalendarHeader from "./CalendarHeader";
+import MeeowStarting from "./MeeowStarting";
+import BookedStarting from "./BookedStarting";
 
 export default function Calendar() {
-  const [bookedOpen, setBookedOpen] = useState(false);
+  // Open popup when Meeow time slot is booked
+  const [popupBooked, setPopupBooked] = useState(false);
 
   function openBookedPopup() {
-    setBookedOpen(true);
+    setPopupBooked(true);
   }
 
   function closeBookedPopup() {
-    setBookedOpen(false);
+    setPopupBooked(false);
+  }
+
+  // Open popup when next meeow is starting and not booked
+  const [popupNextMeeow, setPopupNextMeeow] = useState(false);
+
+  function openMeeowStarting() {
+    setPopupNextMeeow(true);
+  }
+
+  function closeMeeowStarting(event) {
+    event.preventDefault();
+    setPopupNextMeeow(false);
+  }
+
+  // Open popup when next Meeow is starting and is booked
+  const [popupBookedStarting, setPopupBookedStarting] = useState(false);
+
+  function openBookedStarting() {
+    setPopupBookedStarting(true);
+  }
+
+  function closeBookedStarting(event) {
+    event.preventDefault();
+    setPopupBookedStarting(false);
   }
 
   return (
     <div>
-      {bookedOpen && <BookedMeeow closeBookedPopup={closeBookedPopup} />}
+      {popupBooked && <BookedMeeow closeBookedPopup={closeBookedPopup} />}
+      {popupNextMeeow && (
+        <MeeowStarting closeMeeowStarting={closeMeeowStarting} />
+      )}
+      {popupBookedStarting && (
+        <BookedStarting closeBookedStarting={closeBookedStarting} />
+      )}
 
       <div className="week-picker">
         <MdArrowBackIosNew id="prev-week" />
@@ -45,6 +78,13 @@ export default function Calendar() {
         <CalendarRow time="10pm" openBookedPopup={openBookedPopup} />
         <CalendarRow time="11pm" openBookedPopup={openBookedPopup} />
         <CalendarRow time="12pm" openBookedPopup={openBookedPopup} />
+
+        {/* BELOW BUTTONS FOR DEMO PURPOSES ONLY */}
+        <div className="demo-buttons">
+          <button onClick={openBookedStarting}>Booked Meeow Starting</button>
+          <button onClick={openMeeowStarting}>Next Meeow Starting</button>
+          <button>Noone there</button>
+        </div>
       </div>
     </div>
   );

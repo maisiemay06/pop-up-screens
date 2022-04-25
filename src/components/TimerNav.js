@@ -1,33 +1,15 @@
 import { useState } from "react";
 import profileImg from "../imgs/profile-img.png";
 import "../styles/TimerNav.css";
-import MeeowStarting from "./MeeowStarting";
 
 export default function TimerNav() {
-  const [thisMeeowOpen, setThisMeeowOpen] = useState(false);
-
-  function openMeeowStarting() {
-    setThisMeeowOpen(true);
-  }
-
-  function closeMeeowStarting(event) {
-    event.preventDefault();
-    setThisMeeowOpen(false);
-  }
-
   return (
     <header className="counter-nav">
-      {thisMeeowOpen && (
-        <MeeowStarting closeMeeowStarting={closeMeeowStarting} />
-      )}
-
       <i className="fa-solid fa-bars"></i>
       <h6 className="timer-title">the next Meeow starts in</h6>
       <h1 className="timer-countdown">23:54</h1>
-      {/* MeeowStarting popup is linked to book this Meeow button at top of page for demo purposes */}
-      <button className="book-meeow-btn button" onClick={openMeeowStarting}>
-        book this Meeow
-      </button>
+      <button className="book-meeow-btn button">book this Meeow</button>
+
       <i className="fa-solid fa-magnifying-glass"></i>
       <input className="search" type="text" placeholder="Search here"></input>
       <div className="drop-down-hover">
