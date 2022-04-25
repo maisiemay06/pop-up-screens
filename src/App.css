@@ -208,6 +208,7 @@ li {
   margin: 10px;
   opacity: 50%;
   font-size: 1.2rem;
+  z-index: 10;
 }
 
 .popup-text {
@@ -249,6 +250,7 @@ li {
   margin-top: 36px;
 }
 
+/* POPUP WHT */
 .popup-wht {
   background-color: #fff;
 }
@@ -278,6 +280,85 @@ li {
 }
 .popup-wht button {
   color: #fff;
+}
+
+/* INVITE POPUP */
+.popup-friends .popup-text {
+  margin-top: 14vh;
+  width: 50%;
+  margin-inline: auto;
+}
+.popup-friends .popup-title {
+  font-size: 2.8rem;
+}
+.popup-friends .popup-subtitle {
+  font-size: 1.4rem;
+  margin-top: 26px;
+  margin-bottom: 45px;
+}
+.popup-friends p {
+  font-size: 1rem;
+  margin-bottom: 37px;
+}
+.popup-friends input {
+  display: block;
+  height: 50px;
+  width: 420px;
+  margin: 11px auto;
+  padding-left: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.popup-friends button {
+  margin-top: 21px;
+  background-color: #9ca6f6;
+  width: 420px;
+  transition: 0.2s ease-in;
+}
+
+.popup-friends button:hover {
+  background-color: var(--accent-blue);
+}
+
+/* JUST JOINED POPUP */
+.popup-joined #close-btn {
+  color: #17171750;
+}
+.popup-joined .popup-text {
+  display: inline-block;
+  width: 50%;
+  margin-top: 15vh;
+  padding-left: 200px;
+  padding-right: 100px;
+  text-align: left;
+}
+.popup-joined .popup-title {
+  font-size: 2.9rem;
+  margin-bottom: 10%;
+}
+.popup-joined p {
+  font-size: 1.2rem;
+}
+.popup-joined button {
+  height: 50px;
+}
+.popup-joined a {
+  display: block;
+  margin-top: 20%;
+  color: #fff;
+  text-decoration: underline;
+}
+.popup-joined .image-container {
+  display: inline-block;
+  background-color: #fff;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+.popup-joined img {
+  height: 80%;
+  top: 0;
+  margin: 12vh 20%;
 }
 
 /* DEMO BUTTONS */

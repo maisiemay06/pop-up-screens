@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // BookedStarting popup is linked to button for demo purposes only
 // This should be rendered when a user has the next Meeow is about to start and the user has it booked
 
-export default function BookedStarting({ closeBookedStarting }) {
+export default function BookedStarting({ closePopup }) {
   return (
     <motion.div
       initial={{
@@ -28,7 +28,7 @@ export default function BookedStarting({ closeBookedStarting }) {
         }}
         className="popup"
       >
-        <FaTimes id="close-btn" onClick={closeBookedStarting} />
+        <FaTimes id="close-btn" onClick={closePopup} />
         <motion.div className="popup-text">
           <h2 className="popup-title">
             your booked Meeow is{" "}
@@ -37,7 +37,7 @@ export default function BookedStarting({ closeBookedStarting }) {
           <h4 className="popup-subtitle">
             Click before 2 mins past the hour to be included
           </h4>
-          <button onClick={closeBookedStarting} id="join-meeow-btn">
+          <button onClick={closePopup} id="join-meeow-btn">
             join this Meeow now
           </button>
         </motion.div>

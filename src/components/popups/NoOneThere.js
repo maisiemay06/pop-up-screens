@@ -7,7 +7,7 @@ import orangeUser from "../../imgs/orange-user-icon.png";
 // NoOneThere popup is linked to button for demo purposes only
 // This should be rendered when a user joins a Meeow but no others users are available
 
-export default function NoOneThere({ closeNoOneThere }) {
+export default function NoOneThere({ closePopup }) {
   return (
     <motion.div
       initial={{
@@ -31,7 +31,7 @@ export default function NoOneThere({ closeNoOneThere }) {
         }}
         className="popup popup-wht"
       >
-        <FaTimes id="close-btn" onClick={closeNoOneThere} />
+        <FaTimes id="close-btn" onClick={closePopup} />
         <motion.div className="popup-text">
           <h2 className="popup-title">
             <span className="underline">sorr</span>y
@@ -52,7 +52,7 @@ export default function NoOneThere({ closeNoOneThere }) {
               className="user-icon"
             />
           </div>
-          <button onClick={closeNoOneThere} id="book-meeow-btn">
+          <button onClick={closePopup} id="book-meeow-btn">
             book more Meeows
           </button>
         </motion.div>
