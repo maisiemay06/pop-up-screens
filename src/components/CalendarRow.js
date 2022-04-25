@@ -1,17 +1,14 @@
-import {
-  FaPlusCircle,
-  FaCheckCircle,
-  FaRegTimesCircle,
-  FaTimes,
-} from "react-icons/fa";
-import $ from "jquery";
-
-export default function CalendarRow({ time, openPopup }) {
+export default function CalendarRow({ time, openBookedPopup }) {
   function handleClick(event) {
     event.preventDefault();
-    openPopup();
-    event.target.classList.toggle("open-slot");
-    event.target.classList.toggle("booked");
+    let timeSlot = event.target;
+
+    if (timeSlot.classList.contains("open-slot")) {
+      openBookedPopup();
+      timeSlot.classList.replace("open-slot", "booked");
+    } else {
+      timeSlot.classList.replace("booked", "open-slot");
+    }
   }
 
   return (
@@ -25,35 +22,35 @@ export default function CalendarRow({ time, openPopup }) {
       </div>
       <div
         className="col border-top border-right book-slot"
-        onClick={openPopup}
+        onClick={handleClick}
       >
         <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
-        onClick={openPopup}
+        onClick={handleClick}
       >
         <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
-        onClick={openPopup}
+        onClick={handleClick}
       >
         <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
-        onClick={openPopup}
+        onClick={handleClick}
       >
         <a href="" className="open-slot"></a>
       </div>
       <div
         className="col border-top border-right book-slot"
-        onClick={openPopup}
+        onClick={handleClick}
       >
         <a href="" className="open-slot"></a>
       </div>
-      <div className="col border-top book-slot" onClick={openPopup}>
+      <div className="col border-top book-slot" onClick={handleClick}>
         <a href="" className="open-slot"></a>
       </div>
     </div>

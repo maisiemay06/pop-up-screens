@@ -187,6 +187,7 @@ li {
   z-index: 20;
   top: 0;
   left: 0;
+  margin-left: 0;
 }
 
 .popup {
@@ -224,11 +225,23 @@ li {
   margin-bottom: 10px;
 }
 .popup .popup-title {
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: -1px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .popup .popup-subtitle {
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.popup #join-meeow-btn {
+  background-color: var(--accent-blue);
+  border: none;
+  border-radius: 28px;
+  height: 50px;
+  width: 270px;
+  color: var(--main-blue);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 36px;
 }

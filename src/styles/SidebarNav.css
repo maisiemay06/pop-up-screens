@@ -1,11 +1,11 @@
 /* SIDEBAR */
 .sidebar-nav {
   background-color: var(--white);
-  color: #757A7F;
+  color: #757a7f;
   font-weight: 500;
   width: 230px;
   height: 100%;
-  z-index: 11;
+  z-index: 8;
   position: fixed;
   margin-top: -76px;
 }
@@ -51,20 +51,20 @@
   margin-bottom: 15px;
   text-align: left;
   padding-left: 15px;
-  transition: 0.3s ease-out
+  transition: 0.3s ease-out;
 }
 
 .sidebar-footer .tool-tips-btn {
   background-color: var(--accent-blue);
 }
 .sidebar-footer .tool-tips-btn:hover {
-  background-color: #04CCCC;
+  background-color: #04cccc;
 }
 .sidebar-footer .cam-mic-test-btn {
   background-color: var(--main-blue);
 }
 .sidebar-footer .cam-mic-test-btn:hover {
-  background-color: #182AC6;
+  background-color: #182ac6;
 }
 
 .sidebar-footer .nav-list li {

@@ -1,8 +1,9 @@
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import clappingEmoji from "../imgs/clapping-emoji.png";
 
-export default function BookedMeeow({ closeBookedPopup }) {
+// MeeowStarting popup is linked to book this Meeow button at top of page for demo purposes
+
+export default function MeeowStarting({ closeMeeowStarting }) {
   return (
     <motion.div
       initial={{
@@ -26,13 +27,17 @@ export default function BookedMeeow({ closeBookedPopup }) {
         }}
         className="popup"
       >
-        <FaTimes id="close-btn" onClick={closeBookedPopup} />
+        <FaTimes id="close-btn" onClick={closeMeeowStarting} />
         <motion.div className="popup-text">
-          <img src={clappingEmoji} alt="clapping emoji" className="emoji" />
           <h2 className="popup-title">
-            you <span className="underline">booked</span> a Meeow!
+            the next <span className="underline">Meeow</span> is about to start
           </h2>
-          <h4 className="popup-subtitle">time to book another ;&#41;</h4>
+          <h4 className="popup-subtitle">
+            Click before 2 mins past the hour to be included
+          </h4>
+          <button onClick={closeMeeowStarting} id="join-meeow-btn">
+            join this Meeow now
+          </button>
         </motion.div>
       </motion.div>
     </motion.div>
