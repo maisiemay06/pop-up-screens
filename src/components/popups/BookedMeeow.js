@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import clappingEmoji from "../imgs/clapping-emoji.png";
+import clappingEmoji from "../../imgs/clapping-emoji.png";
 
 export default function BookedMeeow({ closeBookedPopup }) {
   return (

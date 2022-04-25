@@ -237,7 +237,7 @@ li {
   font-size: 1.8rem;
 }
 
-.popup #join-meeow-btn {
+.popup button {
   background-color: var(--accent-blue);
   border: none;
   border-radius: 28px;
@@ -247,6 +247,37 @@ li {
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 36px;
+}
+
+.popup-wht {
+  background-color: #fff;
+}
+.popup-wht .popup-text {
+  margin-top: 26vh;
+}
+.popup-wht .popup-title {
+  color: var(--main-blue);
+  margin-right: 20px;
+  display: inline;
+  margin-bottom: 20px;
+}
+.popup-wht .emoji {
+  height: 60px;
+  display: inline;
+}
+.popup-wht .popup-subtitle {
+  color: #757a7f;
+}
+.popup-wht .book-buddies {
+  margin-top: 59px;
+  margin-bottom: 20px;
+}
+.popup-wht .user-icon {
+  display: inline-block;
+  margin: 15px;
+}
+.popup-wht button {
+  color: #fff;
 }
 
 /* DEMO BUTTONS */

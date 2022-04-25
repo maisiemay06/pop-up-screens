@@ -1,30 +1,27 @@
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-import BookedMeeow from "./BookedMeeow";
 import { useState } from "react";
 import CalendarRow from "./CalendarRow";
 import CalendarHeader from "./CalendarHeader";
-import MeeowStarting from "./MeeowStarting";
-import BookedStarting from "./BookedStarting";
+import BookedMeeow from "./popups/BookedMeeow";
+import MeeowStarting from "./popups/MeeowStarting";
+import BookedStarting from "./popups/BookedStarting";
+import NoOneThere from "./popups/NoOneThere";
 
 export default function Calendar() {
   // Open popup when Meeow time slot is booked
   const [popupBooked, setPopupBooked] = useState(false);
-
   function openBookedPopup() {
     setPopupBooked(true);
   }
-
   function closeBookedPopup() {
     setPopupBooked(false);
   }
 
   // Open popup when next meeow is starting and not booked
   const [popupNextMeeow, setPopupNextMeeow] = useState(false);
-
   function openMeeowStarting() {
     setPopupNextMeeow(true);
   }
-
   function closeMeeowStarting(event) {
     event.preventDefault();
     setPopupNextMeeow(false);
@@ -32,14 +29,21 @@ export default function Calendar() {
 
   // Open popup when next Meeow is starting and is booked
   const [popupBookedStarting, setPopupBookedStarting] = useState(false);
-
   function openBookedStarting() {
     setPopupBookedStarting(true);
   }
-
   function closeBookedStarting(event) {
     event.preventDefault();
     setPopupBookedStarting(false);
+  }
+
+  // Open popup when no other users in Meeow
+  const [popupNoOneThere, setPopupNoOneThere] = useState(false);
+  function openNoOneThere() {
+    setPopupNoOneThere(true);
+  }
+  function closeNoOneThere(event) {
+    setPopupNoOneThere(false);
   }
 
   return (
@@ -51,6 +55,7 @@ export default function Calendar() {
       {popupBookedStarting && (
         <BookedStarting closeBookedStarting={closeBookedStarting} />
       )}
+      {popupNoOneThere && <NoOneThere closeNoOneThere={closeNoOneThere} />}
 
       <div className="week-picker">
         <MdArrowBackIosNew id="prev-week" />
@@ -83,7 +88,7 @@ export default function Calendar() {
         <div className="demo-buttons">
           <button onClick={openBookedStarting}>Booked Meeow Starting</button>
           <button onClick={openMeeowStarting}>Next Meeow Starting</button>
-          <button>Noone there</button>
+          <button onClick={openNoOneThere}>No One there</button>
         </div>
       </div>
     </div>
