@@ -20,11 +20,11 @@ export default function InviteFriends({ closePopup }) {
           scale: 0,
         }}
         animate={{
-          scale: [1, 0.9],
+          scale: [0.9, 1, 1, 0.9],
         }}
         transition={{
           ease: "easeIn",
-          duration: 0.3,
+          duration: 0.6,
         }}
         className="popup popup-friends"
       >
