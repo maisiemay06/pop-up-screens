@@ -29,7 +29,7 @@ export default function MeeowStarting({ closePopup }) {
         className="popup"
       >
         <FaTimes id="close-btn" onClick={closePopup} />
-        <motion.div className="popup-text">
+        <div className="popup-text">
           <h2 className="popup-title">
             the next <span className="underline">Meeow</span> is about to start
           </h2>
@@ -39,7 +39,7 @@ export default function MeeowStarting({ closePopup }) {
           <button onClick={closePopup} id="join-meeow-btn">
             join this Meeow now
           </button>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );

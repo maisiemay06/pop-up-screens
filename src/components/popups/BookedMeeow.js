@@ -27,13 +27,13 @@ export default function BookedMeeow({ closePopup }) {
         className="popup"
       >
         <FaTimes id="close-btn" onClick={closePopup} />
-        <motion.div className="popup-text">
+        <div className="popup-text">
           <img src={clappingEmoji} alt="clapping emoji" className="emoji" />
           <h2 className="popup-title">
             you <span className="underline">booked</span> a Meeow!
           </h2>
           <h4 className="popup-subtitle">time to book another ;&#41;</h4>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );

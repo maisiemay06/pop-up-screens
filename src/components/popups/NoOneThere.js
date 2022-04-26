@@ -32,7 +32,7 @@ export default function NoOneThere({ closePopup }) {
         className="popup popup-wht"
       >
         <FaTimes id="close-btn" onClick={closePopup} />
-        <motion.div className="popup-text">
+        <div className="popup-text">
           <h2 className="popup-title">
             <span className="underline">sorr</span>y
           </h2>
@@ -55,7 +55,7 @@ export default function NoOneThere({ closePopup }) {
           <button onClick={closePopup} id="book-meeow-btn">
             book more Meeows
           </button>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );

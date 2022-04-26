@@ -29,7 +29,7 @@ export default function BookedStarting({ closePopup }) {
         className="popup"
       >
         <FaTimes id="close-btn" onClick={closePopup} />
-        <motion.div className="popup-text">
+        <div className="popup-text">
           <h2 className="popup-title">
             your booked Meeow is{" "}
             <span className="underline">starting now!</span>
@@ -40,7 +40,7 @@ export default function BookedStarting({ closePopup }) {
           <button onClick={closePopup} id="join-meeow-btn">
             join this Meeow now
           </button>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );
