@@ -1,13 +1,13 @@
 import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import linkedInPost from "../../imgs/linkedin-post.png";
 import { useState } from "react";
 import clappingEmoji from "../../imgs/clapping-emoji.png";
+import linkedinJustJoined from "../../imgs/linkedin-just-joined.png";
 
-// BookedStarting popup is linked to button for demo purposes only
-// This should be rendered when a user has the next Meeow is about to start and the user has it booked
+// ShareLinkedin popup is linked to button for demo purposes only
+// This should be rendered when a user has just joined Meeow
 
-export default function JustJoined({ closePopup }) {
+export default function ShareLinkedinJoined({ closePopup }) {
   const [popupPreparingLinkedin, setPopupPreparingLinkedin] = useState(false);
   function postToLinkedin() {
     setPopupPreparingLinkedin(true);
@@ -36,10 +36,12 @@ export default function JustJoined({ closePopup }) {
         }}
         className="popup "
       >
-        <FaTimes id="close-btn" onClick={closePopup} />
-        {popupPreparingLinkedin && (
-          <PreparingLinkedIn closePopup={closePopup} />
-        )}
+        <FaTimes
+          id="close-btn"
+          className="close-btn-grey"
+          onClick={closePopup}
+        />
+        {popupPreparingLinkedin && <PreparingLinkedIn />}
         {!popupPreparingLinkedin && (
           <div className="popup-joined">
             <div className="popup-text">
@@ -65,7 +67,7 @@ export default function JustJoined({ closePopup }) {
               <a href="">Don't show me this again</a>
             </div>
             <div className="image-container">
-              <img src={linkedInPost} alt="Linkedin Post" />
+              <img src={linkedinJustJoined} alt="Linkedin Post" />
             </div>
           </div>
         )}
@@ -74,7 +76,7 @@ export default function JustJoined({ closePopup }) {
   );
 }
 
-export function PreparingLinkedIn({ closePopup }) {
+export function PreparingLinkedIn() {
   const [popupPostedLinkedin, setPopupPostedLinkedIn] = useState(false);
   let timeleft = 6;
 
@@ -90,7 +92,7 @@ export function PreparingLinkedIn({ closePopup }) {
 
   return (
     <>
-      {popupPostedLinkedin && <PostedLinkedin closePopup={closePopup} />}
+      {popupPostedLinkedin && <PostedLinkedin />}
       <div className="popup-text preparing-linkedin">
         <div className="popup-countdown">
           <h2 id="timer">5</h2>
@@ -107,7 +109,7 @@ export function PreparingLinkedIn({ closePopup }) {
   );
 }
 
-export function PostedLinkedin({ closePopup }) {
+export function PostedLinkedin() {
   return (
     <div className="popup-text preparing-linkedin">
       <img src={clappingEmoji} alt="clapping emoji" />

@@ -31,7 +31,11 @@ export default function NoOneThere({ closePopup }) {
         }}
         className="popup popup-wht"
       >
-        <FaTimes id="close-btn" onClick={closePopup} />
+        <FaTimes
+          id="close-btn"
+          className="close-btn-grey"
+          onClick={closePopup}
+        />
         <div className="popup-text">
           <h2 className="popup-title">
             <span className="underline">sorr</span>y

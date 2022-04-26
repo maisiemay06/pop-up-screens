@@ -7,8 +7,9 @@ import MeeowStarting from "./popups/MeeowStarting";
 import BookedStarting from "./popups/BookedStarting";
 import NoOneThere from "./popups/NoOneThere";
 import InviteFriends from "./popups/InviteFriends";
-import JustJoined from "./popups/JustJoined";
 import SomeoneJoined from "./popups/SomeoneJoined";
+import ShareLinkedinJoined from "./popups/ShareLinkedInJoined";
+import ShareLinkedinBooked from "./popups/ShareLinkedInBooked";
 
 export default function Calendar() {
   // Open popup when Meeow time slot is booked
@@ -61,13 +62,25 @@ export default function Calendar() {
   }
 
   // Open popup to share LinkedIn post when user has just joined Meeow
-  const [popupJustJoined, setPopupJustJoined] = useState(false);
-  function openJustJoined() {
-    setPopupJustJoined(true);
+  const [popupLinkedinJoined, setPopupLinkedinJoined] = useState(false);
+
+  function openLinkedinJoined() {
+    setPopupLinkedinJoined(true);
   }
-  function closeJustJoined(event) {
+  function closeLinkedinJoined(event) {
     event.preventDefault();
-    setPopupJustJoined(false);
+    setPopupLinkedinJoined(false);
+  }
+
+  // Open popup to share LinkedIn post when user has booked a Meeow
+  const [popupLinkedinBooked, setPopupLinkedinBooked] = useState(false);
+
+  function openLinkedinBooked() {
+    setPopupLinkedinBooked(true);
+  }
+  function closeLinkedinBooked(event) {
+    event.preventDefault();
+    setPopupLinkedinBooked(false);
   }
 
   // Open popup to when another user clicks to join the next Meeow
@@ -89,7 +102,12 @@ export default function Calendar() {
       )}
       {popupNoOneThere && <NoOneThere closePopup={closeNoOneThere} />}
       {popupInviteFriends && <InviteFriends closePopup={closeInviteFriends} />}
-      {popupJustJoined && <JustJoined closePopup={closeJustJoined} />}
+      {popupLinkedinJoined && (
+        <ShareLinkedinJoined closePopup={closeLinkedinJoined} />
+      )}
+      {popupLinkedinBooked && (
+        <ShareLinkedinBooked closePopup={closeLinkedinBooked} />
+      )}
       {popupSomeoneJoined && <SomeoneJoined closePopup={closeSomeoneJoined} />}
 
       <div className="week-picker">
@@ -126,7 +144,8 @@ export default function Calendar() {
           <button onClick={openSomeoneJoined}>someone else just clicked</button>
           <button onClick={openNoOneThere}>no one there</button>
           <button onClick={openInviteFriends}>tell your friends</button>
-          <button onClick={openJustJoined}>i've just joined Meeow</button>
+          <button onClick={openLinkedinJoined}>i've just joined Meeow</button>
+          <button onClick={openLinkedinBooked}>i've just booked a Meeow</button>
         </div>
       </div>
     </div>

@@ -209,6 +209,9 @@ li {
   font-size: 1.2rem;
   z-index: 10;
 }
+.close-btn-grey {
+  color: #17171750;
+}
 
 .popup-text {
   margin-top: 32vh;
@@ -266,9 +269,7 @@ li {
 .popup-wht {
   background-color: #fff;
 }
-.popup-wht #close-btn {
-  color: #17171750;
-}
+
 .popup-wht .popup-text {
   margin-top: 26vh;
 }
@@ -354,10 +355,8 @@ li {
   border: 8px solid #fff;
 }
 
-/* JUST JOINED POPUP */
-.popup-joined #close-btn {
-  color: #17171750;
-}
+/* SHARE LINKEDIN POPUP */
+
 .popup-joined .popup-text {
   display: inline-block;
   width: 50%;
