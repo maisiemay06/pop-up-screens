@@ -8,6 +8,7 @@ import BookedStarting from "./popups/BookedStarting";
 import NoOneThere from "./popups/NoOneThere";
 import InviteFriends from "./popups/InviteFriends";
 import JustJoined from "./popups/JustJoined";
+import SomeoneJoined from "./popups/SomeoneJoined";
 
 export default function Calendar() {
   // Open popup when Meeow time slot is booked
@@ -69,6 +70,16 @@ export default function Calendar() {
     setPopupJustJoined(false);
   }
 
+  // Open popup to when another user clicks to join the next Meeow
+  const [popupSomeoneJoined, setPopupSomeoneJoined] = useState(false);
+  function openSomeoneJoined() {
+    setPopupSomeoneJoined(true);
+  }
+  function closeSomeoneJoined(event) {
+    event.preventDefault();
+    setPopupSomeoneJoined(false);
+  }
+
   return (
     <div>
       {popupBooked && <BookedMeeow closePopup={closeBookedPopup} />}
@@ -79,6 +90,7 @@ export default function Calendar() {
       {popupNoOneThere && <NoOneThere closePopup={closeNoOneThere} />}
       {popupInviteFriends && <InviteFriends closePopup={closeInviteFriends} />}
       {popupJustJoined && <JustJoined closePopup={closeJustJoined} />}
+      {popupSomeoneJoined && <SomeoneJoined closePopup={closeSomeoneJoined} />}
 
       <div className="week-picker">
         <MdArrowBackIosNew id="prev-week" />
@@ -111,6 +123,7 @@ export default function Calendar() {
         <div className="demo-buttons">
           <button onClick={openBookedStarting}>booked Meeow starting</button>
           <button onClick={openMeeowStarting}>next Meeow starting</button>
+          <button onClick={openSomeoneJoined}>someone else just clicked</button>
           <button onClick={openNoOneThere}>no one there</button>
           <button onClick={openInviteFriends}>tell your friends</button>
           <button onClick={openJustJoined}>i've just joined Meeow</button>

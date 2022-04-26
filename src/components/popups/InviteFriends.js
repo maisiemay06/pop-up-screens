@@ -5,6 +5,22 @@ import { motion } from "framer-motion";
 // This should be rendered when a user has the next Meeow is about to start and the user has it booked
 
 export default function InviteFriends({ closePopup }) {
+  function validateEmail(event) {
+    let email = event.target.value;
+    let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,6})+$/;
+    if (regex.test(email)) {
+      document.getElementById("invite-btn").classList.add("active-btn");
+    } else {
+      document.getElementById("invite-btn").classList.remove("active-btn");
+    }
+  }
+
+  function sendInvites(event) {
+    let button = document.getElementById("invite-btn");
+    button.innerHTML = "invitations sent! thank you";
+    button.classList.add("clicked-btn");
+  }
+
   return (
     <motion.div
       initial={{
@@ -41,12 +57,12 @@ export default function InviteFriends({ closePopup }) {
             Type your friends email addresses into the slots below and we’ll
             send them your invitation to join Meeow.
           </p>
-          <input type="email" placeholder="Friend 1" />
-          <input type="email" placeholder="Friend 2" />
-          <input type="email" placeholder="Friend 3" />
-          <input type="email" placeholder="Friend 4" />
-          <input type="email" placeholder="Friend 5" />
-          <button onClick={closePopup} id="invite-btn">
+          <input type="email" placeholder="Friend 1" onChange={validateEmail} />
+          <input type="email" placeholder="Friend 2" onChange={validateEmail} />
+          <input type="email" placeholder="Friend 3" onChange={validateEmail} />
+          <input type="email" placeholder="Friend 4" onChange={validateEmail} />
+          <input type="email" placeholder="Friend 5" onChange={validateEmail} />
+          <button onClick={sendInvites} id="invite-btn">
             send your invitations now
           </button>
         </div>
