@@ -1,10 +1,10 @@
-export default function CalendarRow({ time, openBookedPopup }) {
+export default function CalendarRow({ time, openPopup }) {
   function handleClick(event) {
     event.preventDefault();
     let timeSlot = event.target;
 
     if (timeSlot.classList.contains("open-slot")) {
-      openBookedPopup();
+      openPopup("BookedMeeow", "blue");
       timeSlot.classList.replace("open-slot", "booked");
     } else {
       timeSlot.classList.replace("booked", "open-slot");

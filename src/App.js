@@ -1,8 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import TimerNav from './components/TimerNav'
-import SidebarNav from './components/SidebarNav'
-import Calendar from './components/Calendar';
+import logo from "./logo.svg";
+import "./App.css";
+import TimerNav from "./components/TimerNav";
+import SidebarNav from "./components/SidebarNav";
+import Calendar from "./components/Calendar";
+import "./styles/popups.css";
 
 function App() {
   return (

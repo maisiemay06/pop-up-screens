@@ -4,37 +4,15 @@ import clappingEmoji from "../../imgs/clapping-emoji.png";
 
 export default function BookedMeeow({ closePopup }) {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      className="popup-bkgrnd"
-    >
-      <motion.div
-        initial={{
-          scale: 0,
-        }}
-        animate={{
-          scale: [0.9, 1, 1, 0.9],
-        }}
-        transition={{
-          ease: "easeIn",
-          duration: 0.6,
-        }}
-        className="popup"
-      >
-        <FaTimes id="close-btn" onClick={closePopup} />
-        <div className="popup-text">
-          <img src={clappingEmoji} alt="clapping emoji" className="emoji" />
-          <h2 className="popup-title">
-            you <span className="underline">booked</span> a Meeow!
-          </h2>
-          <h4 className="popup-subtitle">time to book another ;&#41;</h4>
-        </div>
-      </motion.div>
-    </motion.div>
+    <div className="popup-text">
+      <img src={clappingEmoji} alt="clapping emoji" className="emoji" />
+      <h2 className="popup-title">
+        y<span className="underline">ou booked</span> a Meeow!
+      </h2>
+      <h3>come back to the calendar at the time of your booking</h3>
+      <h4 className="popup-subtitle">
+        &#40;entry to every Meeow closes at 3 mins past the hour&#41;
+      </h4>
+    </div>
   );
 }
