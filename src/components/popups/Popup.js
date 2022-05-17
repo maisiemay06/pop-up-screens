@@ -31,9 +31,7 @@ export default function popup({ closePopup, content, color }) {
           ease: "easeIn",
           duration: 0.6,
         }}
-        className={`popup ${color === "white" ? "popup-wht" : ""} ${
-          color === "accent" ? "popup-accent" : ""
-        } ${
+        className={`popup ${color === "white" ? "popup-wht" : ""}  ${
           content === "ShareLinkedInBooked" || content === "ShareLinkedInJoined"
             ? "share-linkedin"
             : ""

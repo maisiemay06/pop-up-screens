@@ -158,15 +158,16 @@
 }
 
 /* SOMEONE ELSE JOINED POPUP */
-.popup-accent {
+.someone-joined button {
   background-color: var(--accent-blue);
-}
-
-.popup-accent .popup-title {
   color: var(--main-blue);
 }
 
-.popup-accent a {
+.someone-joined button:hover {
+  background-color: #04cccc;
+}
+
+.someone-joined a {
   color: var(--white);
 }
 

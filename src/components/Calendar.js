@@ -62,7 +62,7 @@ export default function Calendar() {
           <button onClick={() => openPopup("BookedStarting", "white")}>
             booked Meeow starting
           </button>
-          <button onClick={() => openPopup("SomeoneJoined", "accent")}>
+          <button onClick={() => openPopup("SomeoneJoined", "blue")}>
             someone else just clicked
           </button>
           <button onClick={() => openPopup("NoOneThere", "white")}>
