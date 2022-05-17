@@ -18,7 +18,8 @@ export default function ShareLinkedinBooked({ closePopup }) {
         <div className="popup-joined">
           <div className="popup-text">
             <h2 className="popup-title">
-              help us make Meeow amazing,{" "}
+              help us make Meeow amazing,
+              <br />
               <span className="underline">for you!</span>
             </h2>
             <p>

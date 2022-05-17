@@ -18,6 +18,7 @@ export default function popup({ closePopup, content, color }) {
         opacity: 1,
       }}
       className="popup-bkgrnd"
+      onClick={closePopup}
     >
       <motion.div
         initial={{
@@ -37,8 +38,11 @@ export default function popup({ closePopup, content, color }) {
             ? "share-linkedin"
             : ""
         }`}
+        onClick={(e) => e.stopPropagation()}
       >
-        <FaTimes id="close-btn" onClick={closePopup} />
+        <p id="close-btn" onClick={closePopup}>
+          &times;
+        </p>
         {content === "BookedMeeow" && <BookedMeeow />}
         {content === "BookedStarting" && <BookedStarting />}
         {content === "MeeowStarting" && <MeeowStarting />}

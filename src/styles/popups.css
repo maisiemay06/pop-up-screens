@@ -13,9 +13,11 @@
 .popup {
   background-color: var(--main-blue);
   height: 60vh;
+  max-height: 380px;
   width: 60vw;
+  max-width: 672px;
   margin: auto;
-  margin-top: 20vh;
+  margin-top: 26vh;
   color: #fff;
   overflow: hidden;
   border-radius: 13px;
@@ -23,26 +25,32 @@
 
 .share-linkedin {
   width: 80vw;
+  max-width: 1330px;
   height: 75vh;
+  max-height: 638px;
   margin-top: 12vh;
 }
 
 .popup #close-btn {
   position: relative;
-  left: 56.5vw;
-  top: 0;
+  font-weight: 100;
+  top: -10px;
+  text-align: right;
   margin: 10px;
-  font-size: 1.4rem;
+  font-size: 3rem;
   z-index: 10;
 }
 
+.popup #close-btn:hover {
+  cursor: pointer;
+}
+
 .share-linkedin #close-btn {
-  left: 76vw;
-  color: #17171750;
+  color: var(--main-blue);
 }
 
 .popup-text {
-  margin-top: 8vh;
+  margin-top: 6vh;
   text-align: center;
 }
 
@@ -54,21 +62,22 @@
   text-decoration-skip-ink: none;
 }
 .popup .emoji {
-  height: 100px;
+  height: 55px;
   margin-bottom: 10px;
 }
 .popup .popup-title {
-  font-size: 3rem;
+  font-size: 2.14rem;
   letter-spacing: -1px;
   font-weight: 600;
   margin-bottom: 40px;
 }
 .popup h3 {
-  font-size: 1.8rem;
+  font-size: 1.43rem;
   margin-bottom: 10px;
 }
 .popup .popup-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.14rem;
+  font-weight: 400;
 }
 
 .popup button {
@@ -78,7 +87,7 @@
   height: 50px;
   width: 270px;
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   font-weight: 600;
   margin-top: 36px;
   transition: 0.2 ease-in-out;
@@ -94,7 +103,7 @@
 
   text-decoration: underline;
   display: block;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* POPUP WHT */
@@ -102,11 +111,11 @@
   background-color: #fff;
 }
 .popup-wht #close-btn {
-  color: #17171750;
+  color: var(--main-blue);
 }
 
 .popup-wht .popup-text {
-  margin-top: 11vh;
+  margin-top: 8vh;
 }
 
 .popup-wht .popup-title {
@@ -126,7 +135,7 @@
 
 /* NO ONE THERE POPUP */
 #noone-popup {
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 #noone-popup .popup-title {
@@ -135,15 +144,17 @@
 }
 
 #noone-popup .emoji {
-  height: 4rem;
+  height: 36px;
 }
 
 #noone-popup .popup-subtitle {
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 #noone-popup .user-icon {
   display: inline-block;
-  margin: 10px 15px 0px 15px;
+  height: 48px;
+  margin: 20px 8px 0px 8px;
 }
 
 /* SOMEONE ELSE JOINED POPUP */
@@ -160,22 +171,26 @@
 }
 
 /* SHARE LINKEDIN POPUP */
-
+.popup-joined {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 80vw;
+  max-width: 1330px;
+  height: 75vh;
+  max-height: 638px;
+}
 .popup-joined .popup-text {
-  display: inline-block;
-  width: 50%;
+  width: 100%;
   text-align: left;
-
-  padding-left: 5vw;
-  padding-right: 100px;
+  padding-left: 4vw;
+  padding-right: 150px;
 }
 
 .popup-joined .popup-title {
-  font-size: 2.9rem;
-  margin-bottom: 10%;
+  font-size: 2.14rem;
 }
 .popup-joined p {
-  font-size: 1.2rem;
+  font-size: 1.14rem;
 }
 .popup-joined button {
   background-color: #fff;
@@ -186,23 +201,25 @@
 }
 .popup-joined a {
   display: block;
-  margin-top: 20px;
+  position: relative;
+  top: 90px;
+  left: -40px;
   color: #fff;
   text-decoration: underline;
 }
 .popup-joined .image-container {
-  display: inline-block;
   background-color: #fff;
-  width: 40%;
-  height: 75vh;
-  position: absolute;
-  top: 12vh;
+  width: 100%;
+  height: 102%;
+  position: relative;
+  top: -50px;
   border-radius: 0 13px 13px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .popup-joined img {
   height: 80%;
-  top: 0;
-  margin: 6vh 25%;
 }
 .popup .popup-countdown {
   background-color: var(--main-blue);
