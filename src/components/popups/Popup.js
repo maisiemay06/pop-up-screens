@@ -17,6 +17,10 @@ export default function popup({ closePopup, content, color }) {
       animate={{
         opacity: 1,
       }}
+      transition={{
+        ease: "easeIn",
+        duration: 0.2,
+      }}
       className="popup-bkgrnd"
       onClick={closePopup}
     >
@@ -25,10 +29,10 @@ export default function popup({ closePopup, content, color }) {
           scale: 0,
         }}
         animate={{
-          scale: [1, 1.2, 1.2, 1],
+          scale: [1, 1.2, 1],
         }}
         transition={{
-          ease: "easeIn",
+          ease: "easeOut",
           duration: 0.6,
         }}
         className={`popup ${color === "white" ? "popup-wht" : ""}  ${
@@ -38,20 +42,33 @@ export default function popup({ closePopup, content, color }) {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <p id="close-btn" onClick={closePopup}>
-          &times;
-        </p>
-        {content === "BookedMeeow" && <BookedMeeow />}
-        {content === "BookedStarting" && <BookedStarting />}
-        {content === "MeeowStarting" && <MeeowStarting />}
-        {content === "NoOneThere" && <NoOneThere />}
-        {content === "ShareLinkedInBooked" && (
-          <ShareLinkedinBooked closePopup={closePopup} />
-        )}
-        {content === "ShareLinkedInJoined" && (
-          <ShareLinkedinJoined closePopup={closePopup} />
-        )}
-        {content === "SomeoneJoined" && <SomeoneJoined />}
+        <motion.div
+          initial={{
+            scale: 1,
+          }}
+          animate={{
+            scale: [1, 0.9, 1],
+          }}
+          transition={{
+            ease: "easeOut",
+            duration: 0.6,
+          }}
+        >
+          <p id="close-btn" onClick={closePopup}>
+            &times;
+          </p>
+          {content === "BookedMeeow" && <BookedMeeow />}
+          {content === "BookedStarting" && <BookedStarting />}
+          {content === "MeeowStarting" && <MeeowStarting />}
+          {content === "NoOneThere" && <NoOneThere />}
+          {content === "ShareLinkedInBooked" && (
+            <ShareLinkedinBooked closePopup={closePopup} />
+          )}
+          {content === "ShareLinkedInJoined" && (
+            <ShareLinkedinJoined closePopup={closePopup} />
+          )}
+          {content === "SomeoneJoined" && <SomeoneJoined />}
+        </motion.div>
       </motion.div>
     </motion.div>
   );
