@@ -269,3 +269,46 @@
 .preparing-linkedin .popup-subtitle {
   color: #757a7f;
 }
+
+/* INVITE FRIENDS */
+.invite-friends {
+  width: 656px;
+  height: 95vh;
+  max-height: 819px;
+  margin-top: 4vh;
+}
+.invite-friends p {
+  color: #757a7f;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.invite-friends input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  color: #000;
+}
+
+.invite-friends input::placeholder {
+  color: #9f9f9f;
+}
+
+.invite-friends .invite-btn {
+  width: 302px;
+  height: 50px;
+}
+.invite-friends #send-invite-btn:disabled {
+  background-color: #c9c9c9;
+}
+
+.invite-friends #sent-invite-btn {
+  background-color: var(--accent-blue);
+}
+.invite-friends #sent-invite-btn:hover {
+  background-color: #04cccc;
+}

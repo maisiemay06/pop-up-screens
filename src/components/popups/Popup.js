@@ -8,6 +8,7 @@ import ShareLinkedinJoined from "./ShareLinkedInJoined";
 import SomeoneJoined from "./SomeoneJoined";
 import PreparingLIPost from "./PreparingLIPost";
 import PostedLI from "./PostedLI";
+import InviteFriends from "./InviteFriends";
 
 export default function popup({ closePopup, content, color, openPopup }) {
   return (
@@ -36,7 +37,9 @@ export default function popup({ closePopup, content, color, openPopup }) {
           ease: "easeInOut",
           duration: 0.8,
         }}
-        className={`popup ${color === "white" ? "popup-wht" : ""}  ${
+        className={`popup 
+        ${color === "white" ? "popup-wht" : ""}  
+        ${
           content === "ShareLinkedInBooked" || content === "ShareLinkedInJoined"
             ? "share-linkedin"
             : ""
@@ -45,7 +48,8 @@ export default function popup({ closePopup, content, color, openPopup }) {
           content === "PreparingLIPost" || content === "PostedLI"
             ? "posting-linkedin"
             : ""
-        }`}
+        }
+        ${content === "InviteFriends" ? "invite-friends" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="popup-container">
@@ -74,6 +78,9 @@ export default function popup({ closePopup, content, color, openPopup }) {
             <PreparingLIPost closePopup={closePopup} openPopup={openPopup} />
           )}
           {content === "PostedLI" && <PostedLI />}
+          {content === "InviteFriends" && (
+            <InviteFriends closePopup={closePopup} />
+          )}
         </div>
       </motion.div>
     </motion.div>

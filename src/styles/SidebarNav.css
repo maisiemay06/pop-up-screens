@@ -54,6 +54,12 @@
   transition: 0.3s ease-out;
 }
 
+.sidebar-footer .tell-friend-btn {
+  background-color: var(--dark-blue);
+}
+.sidebar-footer .tell-friend-btn:hover {
+  background-color: #161d50;
+}
 .sidebar-footer .tool-tips-btn {
   background-color: var(--accent-blue);
 }
