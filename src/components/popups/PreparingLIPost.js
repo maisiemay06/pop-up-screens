@@ -19,8 +19,8 @@ export default function PreparingLIPost({ closePopup, openPopup }) {
           <h2 id="timer">5</h2>
         </div>
         <h2 className="popup-title" id="popup-title">
-          we're preparing y<span className="underline">our post</span> and
-          taking you to Linkedin
+          we're preparing your post
+          <br /> <span className="underline">and taking you to Linkedin</span>
         </h2>
         <h4 className="popup-subtitle">
           don't forget to tag everyone you think could benefit from networking

@@ -20,17 +20,17 @@ export default function popup({ closePopup, content, color, openPopup }) {
       }}
       transition={{
         ease: "easeIn",
-        duration: 0.2,
+        duration: 0.8,
       }}
       className="popup-bkgrnd"
       onClick={closePopup}
     >
       <motion.div
         initial={{
-          scale: 0,
+          scale: 0.5,
         }}
         animate={{
-          scale: [1, 1.2, 1],
+          scale: 1,
         }}
         transition={{
           ease: "easeInOut",
@@ -40,22 +40,15 @@ export default function popup({ closePopup, content, color, openPopup }) {
           content === "ShareLinkedInBooked" || content === "ShareLinkedInJoined"
             ? "share-linkedin"
             : ""
+        }
+        ${
+          content === "PreparingLIPost" || content === "PostedLI"
+            ? "posting-linkedin"
+            : ""
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <motion.div
-          initial={{
-            scale: 1,
-          }}
-          animate={{
-            scale: [1, 0.9, 1],
-          }}
-          transition={{
-            ease: "easeInOut",
-            duration: 0.8,
-          }}
-          className="popup-container"
-        >
+        <div className="popup-container">
           <p id="close-btn" onClick={closePopup}>
             &times;
           </p>
@@ -81,7 +74,7 @@ export default function popup({ closePopup, content, color, openPopup }) {
             <PreparingLIPost closePopup={closePopup} openPopup={openPopup} />
           )}
           {content === "PostedLI" && <PostedLI />}
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );

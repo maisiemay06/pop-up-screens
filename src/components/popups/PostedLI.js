@@ -5,8 +5,8 @@ export default function PostedLI() {
     <div className="popup-text preparing-linkedin posted-linkedin">
       <img src={clappingEmoji} alt="clapping emoji" />
       <h2 className="popup-title">
-        <span className="underline">it's posted!</span> we're taking you to
-        Linkedin
+        <span className="underline">it's posted!</span>
+        <br /> we're taking you to Linkedin
       </h2>
     </div>
   );
