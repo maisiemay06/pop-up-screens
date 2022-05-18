@@ -53,7 +53,7 @@ export function PreparingLinkedIn() {
   let timeleft = 6;
 
   let countdown = setInterval(function () {
-    timeleft = timeleft - 1;
+    timeleft -= 1;
     if (timeleft <= 0) {
       clearInterval(countdown);
       setPopupPostedLinkedIn(true);

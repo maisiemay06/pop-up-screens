@@ -1,6 +1,7 @@
 /* POPUP */
 .popup-bkgrnd {
-  background-color: #00000095;
+  background-color: rgba(0, 0, 0, 0.85);
+
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -13,14 +14,17 @@
 .popup {
   background-color: var(--main-blue);
   height: 60vh;
-  max-height: 380px;
+  max-height: 405px;
   width: 60vw;
-  max-width: 672px;
+  max-width: 812px;
   margin: auto;
   margin-top: 26vh;
   color: #fff;
   overflow: hidden;
   border-radius: 13px;
+}
+.popup-wht {
+  background-color: #fff;
 }
 
 .share-linkedin {
@@ -31,27 +35,47 @@
   margin-top: 12vh;
 }
 
+.popup-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CLOSE BTN */
 .popup #close-btn {
-  position: relative;
   font-weight: 100;
-  top: -10px;
+  font-size: 4.7rem;
   text-align: right;
-  margin: 10px;
-  font-size: 3rem;
+  margin: 0 10px;
   z-index: 10;
+  align-self: flex-start;
+  position: relative;
+  right: -77%;
 }
 
 .popup #close-btn:hover {
   cursor: pointer;
+  opacity: 0.5;
 }
 
 .share-linkedin #close-btn {
   color: var(--main-blue);
+  right: -96%;
 }
 
+.popup-wht #close-btn {
+  color: var(--main-blue);
+  right: -73%;
+}
+
+/* POPUP TEXT */
 .popup-text {
-  margin-top: 6vh;
   text-align: center;
+  justify-self: center;
+  align-self: center;
+  margin-left: -45px;
 }
 
 .popup .underline {
@@ -65,21 +89,47 @@
   height: 55px;
   margin-bottom: 10px;
 }
+
+.popup-wht .emoji {
+  height: 60px;
+  display: inline;
+}
+
 .popup .popup-title {
   font-size: 2.14rem;
   letter-spacing: -1px;
   font-weight: 600;
   margin-bottom: 40px;
 }
+.popup-wht .popup-title {
+  color: var(--main-blue);
+}
+
 .popup h3 {
   font-size: 1.43rem;
   margin-bottom: 10px;
 }
 .popup .popup-subtitle {
-  font-size: 1.14rem;
+  font-size: 1.15rem;
   font-weight: 400;
 }
 
+.popup-wht .popup-subtitle {
+  color: #757a7f;
+  margin-top: 40px;
+  margin: auto;
+  max-width: 468px;
+}
+
+.popup a {
+  color: #757a7f;
+  font-size: 0.86rem;
+  text-decoration: underline;
+  display: block;
+  margin-top: 25px;
+}
+
+/* BUTTONS */
 .popup button {
   background-color: var(--main-blue);
   border: none;
@@ -98,46 +148,7 @@
   background-color: var(--dark-blue);
 }
 
-.popup a {
-  color: #757a7f;
-
-  text-decoration: underline;
-  display: block;
-  margin-top: 20px;
-}
-
-/* POPUP WHT */
-.popup-wht {
-  background-color: #fff;
-}
-.popup-wht #close-btn {
-  color: var(--main-blue);
-}
-
-.popup-wht .popup-text {
-  margin-top: 8vh;
-}
-
-.popup-wht .popup-title {
-  color: var(--main-blue);
-}
-
-.popup-wht .emoji {
-  height: 60px;
-  display: inline;
-}
-.popup-wht .popup-subtitle {
-  color: #757a7f;
-  margin-top: 40px;
-  width: 65%;
-  margin: auto;
-}
-
 /* NO ONE THERE POPUP */
-#noone-popup {
-  margin-top: 1vh;
-}
-
 #noone-popup .popup-title {
   display: inline;
   margin-right: 20px;
@@ -184,7 +195,7 @@
   width: 100%;
   text-align: left;
   padding-left: 4vw;
-  padding-right: 150px;
+  padding-right: 80px;
 }
 
 .popup-joined .popup-title {
@@ -211,9 +222,7 @@
 .popup-joined .image-container {
   background-color: #fff;
   width: 100%;
-  height: 102%;
-  position: relative;
-  top: -50px;
+  height: 100%;
   border-radius: 0 13px 13px 0;
   display: flex;
   justify-content: center;
@@ -222,6 +231,9 @@
 .popup-joined img {
   height: 80%;
 }
+
+/* POSTING TO LINKED IN COUNTDOWN */
+
 .popup .popup-countdown {
   background-color: var(--main-blue);
   color: #fff;
@@ -237,8 +249,6 @@
 .popup .preparing-linkedin {
   background-color: #fff;
   height: 100%;
-  margin-top: -5vh;
-  padding-top: 19vh;
   padding-bottom: 15vh;
 }
 .popup .preparing-linkedin h2 {

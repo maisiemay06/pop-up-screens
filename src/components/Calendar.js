@@ -24,6 +24,7 @@ export default function Calendar() {
           closePopup={closePopup}
           content={popupContent}
           color={popupColor}
+          openPopup={openPopup}
         />
       )}
 

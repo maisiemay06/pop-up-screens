@@ -1,4 +1,3 @@
-import { FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import BookedMeeow from "./BookedMeeow";
 import BookedStarting from "./BookedStarting";
@@ -7,8 +6,10 @@ import NoOneThere from "./NoOneThere";
 import ShareLinkedinBooked from "./ShareLinkedInBooked";
 import ShareLinkedinJoined from "./ShareLinkedInJoined";
 import SomeoneJoined from "./SomeoneJoined";
+import PreparingLIPost from "./PreparingLIPost";
+import PostedLI from "./PostedLI";
 
-export default function popup({ closePopup, content, color }) {
+export default function popup({ closePopup, content, color, openPopup }) {
   return (
     <motion.div
       initial={{
@@ -32,8 +33,8 @@ export default function popup({ closePopup, content, color }) {
           scale: [1, 1.2, 1],
         }}
         transition={{
-          ease: "easeOut",
-          duration: 0.6,
+          ease: "easeInOut",
+          duration: 0.8,
         }}
         className={`popup ${color === "white" ? "popup-wht" : ""}  ${
           content === "ShareLinkedInBooked" || content === "ShareLinkedInJoined"
@@ -50,9 +51,10 @@ export default function popup({ closePopup, content, color }) {
             scale: [1, 0.9, 1],
           }}
           transition={{
-            ease: "easeOut",
-            duration: 0.6,
+            ease: "easeInOut",
+            duration: 0.8,
           }}
+          className="popup-container"
         >
           <p id="close-btn" onClick={closePopup}>
             &times;
@@ -61,13 +63,24 @@ export default function popup({ closePopup, content, color }) {
           {content === "BookedStarting" && <BookedStarting />}
           {content === "MeeowStarting" && <MeeowStarting />}
           {content === "NoOneThere" && <NoOneThere />}
+          {content === "SomeoneJoined" && <SomeoneJoined />}
+
           {content === "ShareLinkedInBooked" && (
-            <ShareLinkedinBooked closePopup={closePopup} />
+            <ShareLinkedinBooked
+              closePopup={closePopup}
+              openPopup={openPopup}
+            />
           )}
           {content === "ShareLinkedInJoined" && (
-            <ShareLinkedinJoined closePopup={closePopup} />
+            <ShareLinkedinJoined
+              closePopup={closePopup}
+              openPopup={openPopup}
+            />
           )}
-          {content === "SomeoneJoined" && <SomeoneJoined />}
+          {content === "PreparingLIPost" && (
+            <PreparingLIPost closePopup={closePopup} openPopup={openPopup} />
+          )}
+          {content === "PostedLI" && <PostedLI />}
         </motion.div>
       </motion.div>
     </motion.div>
