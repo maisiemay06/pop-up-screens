@@ -13,6 +13,8 @@ export default function InviteFriends({ closePopup }) {
     let email = event.target.value;
     if (validateEmail(email)) {
       setEmailGiven(true);
+    } else {
+      setEmailGiven(false);
     }
   }
 
