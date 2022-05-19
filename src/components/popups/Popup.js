@@ -21,21 +21,21 @@ export default function popup({ closePopup, content, color, openPopup }) {
       }}
       transition={{
         ease: "easeIn",
-        duration: 0.8,
+        duration: 0.3,
       }}
       className="popup-bkgrnd"
       onClick={closePopup}
     >
       <motion.div
         initial={{
-          scale: 0.5,
+          scale: 0.8,
         }}
         animate={{
           scale: 1,
         }}
         transition={{
           ease: "easeInOut",
-          duration: 0.8,
+          duration: 0.6,
         }}
         className={`popup 
         ${color === "white" ? "popup-wht" : ""}  
@@ -52,10 +52,10 @@ export default function popup({ closePopup, content, color, openPopup }) {
         ${content === "InviteFriends" ? "invite-friends" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
+        <p id="close-btn" onClick={closePopup}>
+          &times;
+        </p>
         <div className="popup-container">
-          <p id="close-btn" onClick={closePopup}>
-            &times;
-          </p>
           {content === "BookedMeeow" && <BookedMeeow />}
           {content === "BookedStarting" && <BookedStarting />}
           {content === "MeeowStarting" && <MeeowStarting />}

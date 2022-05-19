@@ -30,8 +30,8 @@ export default function InviteFriends({ closePopup }) {
       </h2>
       <h4 className="popup-subtitle">
         Every new member of Meeow makes the community bigger and better for you
-        and everyone around the world. <br /> Invite your friends to take their
-        14 free trial.
+        and everyone around the world. Invite your friends to join the Meeow
+        community for free.
       </h4>
       <p>
         Type your friends' email addresses into the slots below to invite them
