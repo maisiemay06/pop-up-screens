@@ -84,6 +84,15 @@
   margin-top: 0px;
 }
 
+@media only screen and (max-width: 1400px) {
+  .popup #close-btn {
+    right: -8px;
+  }
+  .share-linkedin #close-btn {
+    right: 0;
+  }
+}
+
 /* POPUP TEXT */
 .popup-text {
   text-align: center;
@@ -330,8 +339,8 @@
 @media only screen and (max-width: 1400px) {
   .invite-friends {
     width: 600px;
-    height: 78vh;
-    margin-top: 10vh;
+    height: 81vh;
+    margin-top: 9vh;
   }
   .invite-friends input {
     height: 40px;
