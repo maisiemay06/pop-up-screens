@@ -25,7 +25,7 @@ export default function NoOneThere({ closePopup }) {
         <img src={orangeUser} alt="orange user icon" className="user-icon" />
       </div>
       <button onClick={closePopup} id="book-meeow-btn">
-        book more Meeows now
+        book more Meeows
       </button>
     </div>
   );

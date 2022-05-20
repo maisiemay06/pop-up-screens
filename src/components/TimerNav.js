@@ -1,4 +1,3 @@
-import { useState } from "react";
 import profileImg from "../imgs/profile-img.png";
 import "../styles/TimerNav.css";
 

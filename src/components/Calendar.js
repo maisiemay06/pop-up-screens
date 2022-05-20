@@ -8,10 +8,12 @@ export default function Calendar() {
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupContent, setPopupContent] = useState("");
   const [popupColor, setPopupColor] = useState("");
-  function openPopup(content, color) {
+  const [image, setImage] = useState("");
+  function openPopup(content, color, img) {
     setPopupOpen(true);
     setPopupContent(content);
     setPopupColor(color);
+    setImage(img);
   }
   function closePopup() {
     setPopupOpen(false);
@@ -25,6 +27,7 @@ export default function Calendar() {
           content={popupContent}
           color={popupColor}
           openPopup={openPopup}
+          image={image}
         />
       )}
 
@@ -69,10 +72,18 @@ export default function Calendar() {
           <button onClick={() => openPopup("NoOneThere", "white")}>
             no one there
           </button>
-          <button onClick={() => openPopup("ShareLinkedInJoined", "blue")}>
+          <button
+            onClick={() =>
+              openPopup("ShareLinkedInJoined", "blue", "linkedinJustJoined")
+            }
+          >
             i've just joined Meeow
           </button>
-          <button onClick={() => openPopup("ShareLinkedInBooked", "blue")}>
+          <button
+            onClick={() =>
+              openPopup("ShareLinkedInJoined", "blue", "linkedinBookedMeeow")
+            }
+          >
             i've just booked a Meeow
           </button>
         </div>

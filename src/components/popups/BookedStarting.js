@@ -4,8 +4,8 @@
 export default function BookedStarting({ closePopup }) {
   return (
     <div className="popup-text">
-      <h2 className="popup-title">
-        your booked Meeow is <span className="underline">starting now!</span>
+      <h2 className="popup-title wider-title">
+        your booked Meeow <span className="mob-underline">is </span><span className="underline">starting now!</span>
       </h2>
       <h4 className="popup-subtitle">
         Click before 2 mins past the hour to be included

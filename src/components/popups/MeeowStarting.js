@@ -5,7 +5,8 @@ export default function MeeowStarting({ closePopup }) {
   return (
     <div className="popup-text">
       <h2 className="popup-title">
-        the next Meeow is <span className="underline">about to start</span>
+        the next Meeow <span className="mob-underline">is </span>
+        <span className="underline">about to start</span>
       </h2>
       <h4 className="popup-subtitle">
         Click before 2 mins past the hour to be included

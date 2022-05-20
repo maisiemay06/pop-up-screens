@@ -28,15 +28,6 @@
   background-color: #fff;
 }
 
-@media only screen and (max-width: 1400px) {
-  .popup {
-    height: 50vh;
-    max-height: 405px;
-    width: 50vw;
-    max-width: 812px;
-  }
-}
-
 .share-linkedin {
   width: 80vw;
   max-width: 1330px;
@@ -84,15 +75,6 @@
   margin-top: 0px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .popup #close-btn {
-    right: -8px;
-  }
-  .share-linkedin #close-btn {
-    right: 0;
-  }
-}
-
 /* POPUP TEXT */
 .popup-text {
   text-align: center;
@@ -100,7 +82,8 @@
   align-self: center;
 }
 
-.popup .underline {
+.popup .underline,
+.desk-underline {
   text-decoration: underline;
   text-underline-offset: 3%;
   text-decoration-color: var(--accent-blue);
@@ -258,6 +241,10 @@
   height: 80%;
 }
 
+.mob-only {
+  display: none;
+}
+
 /* POSTING TO LINKED IN COUNTDOWN */
 .posting-linkedin {
   width: 40vw;
@@ -336,7 +323,18 @@
   background-color: #04cccc;
 }
 
+/* MEDIA QUERIES */
 @media only screen and (max-width: 1400px) {
+  .popup {
+    height: 50vh;
+    width: 50vw;
+  }
+  .popup #close-btn {
+    right: -8px;
+  }
+  .share-linkedin #close-btn {
+    right: 0;
+  }
   .invite-friends {
     width: 600px;
     height: 81vh;
@@ -344,5 +342,106 @@
   }
   .invite-friends input {
     height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .popup {
+    height: auto;
+    width: 310px;
+    padding-block: 35px;
+  }
+  #close-btn {
+    top: -30px;
+    right: -20px;
+  }
+  .popup-wht .popup-title {
+    max-width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .popup .wider-title {
+    max-width: 225px;
+  }
+  .popup-text h3,
+  .popup-subtitle {
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+  }
+  #noone-popup .popup-subtitle,
+  .someone-joined .popup-subtitle {
+    width: 234px;
+  }
+  .popup button {
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  .popup .mob-underline {
+    text-decoration: underline;
+    text-underline-offset: 3%;
+    text-decoration-color: var(--accent-blue);
+    text-decoration-thickness: 4px;
+    text-decoration-skip-ink: none;
+  }
+  .desk-underline {
+    text-decoration: none;
+  }
+  #noone-popup .emoji,
+  #noone-popup .user-icon {
+    height: 27px;
+  }
+
+  /* SHARE TO LINKED IN MOBILE */
+  .share-linkedin {
+    overflow-y: scroll;
+    max-width: 475px;
+    height: 90vh;
+    max-height: 800px;
+    margin-top: 6vh;
+  }
+  .popup-joined {
+    display: block;
+  }
+  .popup-joined .popup-text {
+    text-align: center;
+    padding: 0 30px 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .desk-only {
+    display: none;
+  }
+  .mob-only {
+    display: block;
+  }
+
+  .popup-joined button {
+    background-color: var(--accent-blue);
+  }
+  .popup-joined a {
+    display: block;
+    color: #fff;
+    text-decoration: underline;
+    width: 100%;
+  }
+  .popup-joined img {
+    height: 80%;
+    position: relative;
+    top: -110px;
+  }
+  .share-linkedin #close-btn {
+    color: #fff;
+    right: -10px;
+  }
+  .popup-joined .image-container {
+    margin-left: -25px;
+    width: 120%;
+    border-radius: 0;
   }
 }

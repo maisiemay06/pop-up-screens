@@ -3,14 +3,19 @@ import BookedMeeow from "./BookedMeeow";
 import BookedStarting from "./BookedStarting";
 import MeeowStarting from "./MeeowStarting";
 import NoOneThere from "./NoOneThere";
-import ShareLinkedinBooked from "./ShareLinkedInBooked";
 import ShareLinkedinJoined from "./ShareLinkedInJoined";
 import SomeoneJoined from "./SomeoneJoined";
 import PreparingLIPost from "./PreparingLIPost";
 import PostedLI from "./PostedLI";
 import InviteFriends from "./InviteFriends";
 
-export default function popup({ closePopup, content, color, openPopup }) {
+export default function popup({
+  closePopup,
+  content,
+  color,
+  openPopup,
+  image,
+}) {
   return (
     <motion.div
       initial={{
@@ -39,11 +44,7 @@ export default function popup({ closePopup, content, color, openPopup }) {
         }}
         className={`popup 
         ${color === "white" ? "popup-wht" : ""}  
-        ${
-          content === "ShareLinkedInBooked" || content === "ShareLinkedInJoined"
-            ? "share-linkedin"
-            : ""
-        }
+        ${content === "ShareLinkedInJoined" ? "share-linkedin" : ""}
         ${
           content === "PreparingLIPost" || content === "PostedLI"
             ? "posting-linkedin"
@@ -62,16 +63,11 @@ export default function popup({ closePopup, content, color, openPopup }) {
           {content === "NoOneThere" && <NoOneThere />}
           {content === "SomeoneJoined" && <SomeoneJoined />}
 
-          {content === "ShareLinkedInBooked" && (
-            <ShareLinkedinBooked
-              closePopup={closePopup}
-              openPopup={openPopup}
-            />
-          )}
           {content === "ShareLinkedInJoined" && (
             <ShareLinkedinJoined
               closePopup={closePopup}
               openPopup={openPopup}
+              image={image}
             />
           )}
           {content === "PreparingLIPost" && (
