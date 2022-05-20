@@ -1,11 +1,10 @@
-// BookedStarting popup is linked to button for demo purposes only
-// This should be rendered when a user has the next Meeow is about to start and the user has it booked
+// When a Meeow is starting an duser has already booked it
 
 export default function BookedStarting({ closePopup }) {
   return (
     <div className="popup-text">
       <h2 className="popup-title wider-title">
-        your booked Meeow <span className="mob-underline">is </span><span className="underline">starting now!</span>
+        your booked Meeow is starting now!
       </h2>
       <h4 className="popup-subtitle">
         Click before 2 mins past the hour to be included

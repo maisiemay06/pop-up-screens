@@ -1,7 +1,7 @@
 import linkedinBookedMeeow from "../../imgs/linkedin-booked-meeow.png";
 import linkedinJustJoined from "../../imgs/linkedin-just-joined.png";
-// ShareLinkedin popup is linked to button for demo purposes only
-// This should be rendered when a user has just joined Meeow
+
+
 
 export default function ShareLinkedinJoined({ closePopup, openPopup, image }) {
   function postToLinkedin() {
@@ -15,7 +15,7 @@ export default function ShareLinkedinJoined({ closePopup, openPopup, image }) {
         <div className="popup-text">
           <h2 className="popup-title">
             help us make Meeow amazing, <br className="desk-only" />
-            <span className="underline">for you!</span>
+            for you!
           </h2>
           <p>
             The more people join the Meeow community, the more new connections

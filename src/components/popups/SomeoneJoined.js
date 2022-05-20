@@ -5,9 +5,7 @@ export default function SomeoneJoined({ closePopup }) {
   return (
     <div className="popup-text someone-joined">
       <h2 className="popup-title">
-        there's someone waiting to{" "}
-        <span className="desk-underline">network </span>
-        <span className="underline">right now!</span>
+        there's someone waiting to network right now!
       </h2>
       <h4 className="popup-subtitle">
         Don't delay! Click now to discover who's waiting to meet you.

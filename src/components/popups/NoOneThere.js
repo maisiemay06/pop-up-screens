@@ -2,15 +2,12 @@ import sorryEmoji from "../../imgs/sorry-emoji.png";
 import blueUser from "../../imgs/blue-user-icon.png";
 import orangeUser from "../../imgs/orange-user-icon.png";
 
-// NoOneThere popup is linked to button for demo purposes only
-// This should be rendered when a user joins a Meeow but no others users are available
+// When user clicks to join Meeow but no one else does
 
 export default function NoOneThere({ closePopup }) {
   return (
     <div className="popup-text" id="noone-popup">
-      <h2 className="popup-title">
-        <span className="underline">sorr</span>y
-      </h2>
+      <h2 className="popup-title">sorry</h2>
       <img src={sorryEmoji} alt="sorry emoji" className="emoji" />
 
       <h4 className="popup-subtitle">

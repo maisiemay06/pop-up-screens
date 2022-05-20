@@ -364,12 +364,15 @@
   .popup .wider-title {
     max-width: 225px;
   }
-  .popup-text h3,
-  .popup-subtitle {
+  .popup .popup-text h3 {
+    margin-top: -20px;
+  }
+
+  .popup .popup-text h3,
+  .popup .popup-subtitle {
     width: 190px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.4rem;
   }
   #noone-popup .popup-subtitle,
   .someone-joined .popup-subtitle {
@@ -380,7 +383,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
   }
   .popup .mob-underline {
     text-decoration: underline;

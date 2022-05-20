@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// User clicks tell a friend button
+
 export default function InviteFriends({ closePopup }) {
   const [emailGiven, setEmailGiven] = useState(false);
   const [invitesSent, setInvitesSent] = useState(false);
@@ -25,9 +27,7 @@ export default function InviteFriends({ closePopup }) {
 
   return (
     <div className="popup-text">
-      <h2 className="popup-title">
-        <span className="underline">tell your friends</span> about Meeow
-      </h2>
+      <h2 className="popup-title">tell your friends about Meeow</h2>
       <h4 className="popup-subtitle">
         Every new member of Meeow makes the community bigger and better for you
         and everyone around the world. Invite your friends to join the Meeow
