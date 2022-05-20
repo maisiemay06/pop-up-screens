@@ -399,7 +399,6 @@
 
   /* SHARE TO LINKED IN MOBILE */
   .share-linkedin {
-    overflow-y: scroll;
     max-width: 475px;
     height: 90vh;
     max-height: 800px;
