@@ -444,4 +444,14 @@
     width: 120%;
     border-radius: 0;
   }
+
+  /* INVITE FRIENDS MOBILE */
+  .invite-friends .popup-subtitle,
+  .invite-friends p,
+  .invite-friends input,
+  .invite-friends .invite-btn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
