@@ -58,10 +58,16 @@ export default function popup({
         </p>
         <div className="popup-container">
           {content === "BookedMeeow" && <BookedMeeow />}
-          {content === "BookedStarting" && <BookedStarting />}
-          {content === "MeeowStarting" && <MeeowStarting />}
+          {content === "BookedStarting" && (
+            <BookedStarting closePopup={closePopup} />
+          )}
+          {content === "MeeowStarting" && (
+            <MeeowStarting closePopup={closePopup} />
+          )}
           {content === "NoOneThere" && <NoOneThere />}
-          {content === "SomeoneJoined" && <SomeoneJoined />}
+          {content === "SomeoneJoined" && (
+            <SomeoneJoined closePopup={closePopup} />
+          )}
 
           {content === "ShareLinkedInJoined" && (
             <ShareLinkedinJoined
