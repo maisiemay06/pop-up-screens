@@ -204,3 +204,7 @@ li {
 .demo-buttons button:hover {
   background-color: #16c3c3;
 }
+
+.welcome-buttons {
+  right: 180px;
+}

@@ -331,32 +331,42 @@
 /* WELCOME POPUP */
 .welcome {
   max-width: 500px;
-  max-height: 405px;
+  height: auto;
+  max-height: 450px;
   overflow: unset;
+  padding-bottom: 50px;
 }
 
 .welcome #close-btn {
-  display: none;
+  right: -10px;
 }
 
 .welcome img {
-  margin-top: -100px;
+  margin-top: -70px;
   height: 168px;
-  width: 168px;
+  width: auto;
   margin-bottom: 10px;
+}
+.welcome .smaller-img {
+  height: 152px;
 }
 
 .welcome .popup-title {
   margin-bottom: 20px;
-  width: 70%;
+}
+.welcome .smaller-title {
+  font-size: 1.8rem;
+  width: 75%;
   margin-inline: auto;
 }
 .welcome .popup-subtitle {
-  width: 70%;
+  width: 80%;
   margin-inline: auto;
+  margin-top: 15px;
 }
 
 .welcome button {
+  margin-top: 20px;
   width: 331px;
 }
 
@@ -368,6 +378,12 @@
   }
   .popup #close-btn {
     right: -8px;
+  }
+  .welcome {
+    max-width: 500px;
+    height: 450px;
+    max-height: 450px;
+    overflow: unset;
   }
 
   .share-linkedin {

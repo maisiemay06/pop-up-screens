@@ -8,7 +8,15 @@ import SomeoneJoined from "./SomeoneJoined";
 import PreparingLIPost from "./PreparingLIPost";
 import PostedLI from "./PostedLI";
 import InviteFriends from "./InviteFriends";
-import Welcome from "./Welcome";
+import Welcome from "./welcome/Welcome";
+import Welcome2 from "./welcome/Welcome2";
+import Welcome3 from "./welcome/Welcome3";
+import Welcome4 from "./welcome/Welcome4";
+import Welcome5 from "./welcome/Welcome5";
+import Welcome6 from "./welcome/Welcome6";
+import Welcome7 from "./welcome/Welcome7";
+import Welcome8 from "./welcome/Welcome8";
+import Welcome9 from "./welcome/Welcome9";
 
 export default function popup({
   closePopup,
@@ -52,7 +60,19 @@ export default function popup({
             : ""
         }
         ${content === "InviteFriends" ? "invite-friends" : ""}
-        ${content === "Welcome" ? "welcome" : ""}`}
+        ${
+          content === "Welcome" ||
+          content === "Welcome2" ||
+          content === "Welcome3" ||
+          content === "Welcome4" ||
+          content === "Welcome5" ||
+          content === "Welcome6" ||
+          content === "Welcome7" ||
+          content === "Welcome8" ||
+          content === "Welcome9"
+            ? "welcome"
+            : ""
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <p id="close-btn" onClick={closePopup}>
@@ -86,6 +106,14 @@ export default function popup({
             <InviteFriends closePopup={closePopup} />
           )}
           {content === "Welcome" && <Welcome closePopup={closePopup} />}
+          {content === "Welcome2" && <Welcome2 closePopup={closePopup} />}
+          {content === "Welcome3" && <Welcome3 closePopup={closePopup} />}
+          {content === "Welcome4" && <Welcome4 closePopup={closePopup} />}
+          {content === "Welcome5" && <Welcome5 closePopup={closePopup} />}
+          {content === "Welcome6" && <Welcome6 closePopup={closePopup} />}
+          {content === "Welcome7" && <Welcome7 closePopup={closePopup} />}
+          {content === "Welcome8" && <Welcome8 closePopup={closePopup} />}
+          {content === "Welcome9" && <Welcome9 closePopup={closePopup} />}
         </div>
       </motion.div>
     </motion.div>

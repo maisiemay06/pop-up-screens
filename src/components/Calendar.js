@@ -57,37 +57,62 @@ export default function Calendar() {
         <CalendarRow time="10pm" openPopup={openPopup} />
         <CalendarRow time="11pm" openPopup={openPopup} />
         <CalendarRow time="12am" openPopup={openPopup} />
-
-        {/* BELOW BUTTONS FOR DEMO PURPOSES ONLY */}
-        <div className="demo-buttons">
-          <button onClick={() => openPopup("MeeowStarting", "white")}>
-            next Meeow starting
-          </button>
-          <button onClick={() => openPopup("BookedStarting", "white")}>
-            booked Meeow starting
-          </button>
-          <button onClick={() => openPopup("SomeoneJoined", "blue")}>
-            someone else just clicked
-          </button>
-          <button onClick={() => openPopup("NoOneThere", "white")}>
-            no one there
-          </button>
-          <button
-            onClick={() =>
-              openPopup("ShareLinkedInJoined", "blue", "linkedinJustJoined")
-            }
-          >
-            i've just joined Meeow
-          </button>
-          <button
-            onClick={() =>
-              openPopup("ShareLinkedInJoined", "blue", "linkedinBookedMeeow")
-            }
-          >
-            i've just booked a Meeow
-          </button>
-          <button onClick={() => openPopup("Welcome", "white")}>Welcome</button>
-        </div>
+      </div>
+      {/* BELOW BUTTONS FOR DEMO PURPOSES ONLY */}
+      <div className="demo-buttons">
+        <button onClick={() => openPopup("MeeowStarting", "white")}>
+          next Meeow starting
+        </button>
+        <button onClick={() => openPopup("BookedStarting", "white")}>
+          booked Meeow starting
+        </button>
+        <button onClick={() => openPopup("SomeoneJoined", "blue")}>
+          someone else just clicked
+        </button>
+        <button onClick={() => openPopup("NoOneThere", "white")}>
+          no one there
+        </button>
+        <button
+          onClick={() =>
+            openPopup("ShareLinkedInJoined", "blue", "linkedinJustJoined")
+          }
+        >
+          i've just joined Meeow
+        </button>
+        <button
+          onClick={() =>
+            openPopup("ShareLinkedInJoined", "blue", "linkedinBookedMeeow")
+          }
+        >
+          i've just booked a Meeow
+        </button>
+      </div>
+      <div className="welcome-buttons demo-buttons">
+        <button onClick={() => openPopup("Welcome", "white")}>Welcome 1</button>
+        <button onClick={() => openPopup("Welcome2", "white")}>
+          Welcome 2
+        </button>
+        <button onClick={() => openPopup("Welcome3", "white")}>
+          Welcome 3
+        </button>
+        <button onClick={() => openPopup("Welcome4", "white")}>
+          Welcome 4
+        </button>
+        <button onClick={() => openPopup("Welcome5", "white")}>
+          Welcome 5
+        </button>
+        <button onClick={() => openPopup("Welcome6", "white")}>
+          Welcome 6
+        </button>
+        <button onClick={() => openPopup("Welcome7", "white")}>
+          Welcome 7
+        </button>
+        <button onClick={() => openPopup("Welcome8", "white")}>
+          Welcome 8
+        </button>
+        <button onClick={() => openPopup("Welcome9", "white")}>
+          Welcome 9
+        </button>
       </div>
     </div>
   );
