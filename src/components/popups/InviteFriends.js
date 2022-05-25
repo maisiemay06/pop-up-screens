@@ -37,27 +37,29 @@ export default function InviteFriends({ closePopup }) {
         Type your friends' email addresses into the slots below to invite them
         to join Meeow
       </p>
-      <input type="email" placeholder="Friend 1" onChange={handleEmail} />
-      <input type="email" placeholder="Friend 2" />
-      <input type="email" placeholder="Friend 3" />
-      <input type="email" placeholder="Friend 4" />
-      <input type="email" placeholder="Friend 5" />
+      <div className="invite-fields">
+        <input type="email" placeholder="Friend 1" onChange={handleEmail} />
+        <input type="email" placeholder="Friend 2" />
+        <input type="email" placeholder="Friend 3" />
+        <input type="email" placeholder="Friend 4" />
+        <input type="email" placeholder="Friend 5" />
 
-      {!invitesSent && (
-        <button
-          id="send-invite-btn"
-          className="invite-btn"
-          disabled={emailGiven ? false : true}
-          onClick={handleSubmit}
-        >
-          send your invitations now
-        </button>
-      )}
-      {invitesSent && (
-        <button id="sent-invite-btn" className="invite-btn">
-          invitations sent! thank you
-        </button>
-      )}
+        {!invitesSent && (
+          <button
+            id="send-invite-btn"
+            className="invite-btn"
+            disabled={emailGiven ? false : true}
+            onClick={handleSubmit}
+          >
+            send your invitations now
+          </button>
+        )}
+        {invitesSent && (
+          <button id="sent-invite-btn" className="invite-btn">
+            invitations sent! thank you
+          </button>
+        )}
+      </div>
       <a href="" onClick={closePopup}>
         Don't show me this again
       </a>

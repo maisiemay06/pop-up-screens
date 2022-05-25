@@ -139,7 +139,7 @@
 .popup button {
   background-color: var(--main-blue);
   border: none;
-  border-radius: 28px;
+  border-radius: 4px;
   height: 50px;
   width: 270px;
   color: var(--white);
@@ -508,6 +508,7 @@
   }
 
   /* INVITE FRIENDS MOBILE */
+
   .invite-friends .popup-subtitle,
   .invite-friends p,
   .invite-friends input,
@@ -515,6 +516,9 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .invite-friends .invite-fields {
+    padding: 0 10px;
   }
 
   /* WELCOME MOBILE */

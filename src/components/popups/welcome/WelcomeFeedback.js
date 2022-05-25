@@ -8,7 +8,7 @@ export default function WelcomeFeedback({ closePopup }) {
         <h2 className="popup-title">
           Hey! how's it going
           <br />
-          Jeremy Anthony!
+          Jeremy Anthony?
         </h2>
         <h4 className="popup-subtitle">
           We love regular feedback on how Meeow is helping you drive your
