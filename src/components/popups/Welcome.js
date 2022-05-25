@@ -1,6 +1,6 @@
 import Image434 from "../../imgs/Image-434.png";
 
-export default function Christmas({ closePopup }) {
+export default function Welcome({ closePopup }) {
   return (
     <>
       <img src={Image434} alt="" />

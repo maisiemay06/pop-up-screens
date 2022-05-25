@@ -328,35 +328,35 @@
   background-color: #04cccc;
 }
 
-/* HAPPY CHRISTMAS POPUP */
-.christmas {
+/* WELCOME POPUP */
+.welcome {
   max-width: 500px;
   max-height: 405px;
   overflow: unset;
 }
 
-.christmas #close-btn {
+.welcome #close-btn {
   display: none;
 }
 
-.christmas img {
+.welcome img {
   margin-top: -100px;
   height: 168px;
   width: 168px;
   margin-bottom: 10px;
 }
 
-.christmas .popup-title {
+.welcome .popup-title {
   margin-bottom: 20px;
   width: 70%;
   margin-inline: auto;
 }
-.christmas .popup-subtitle {
+.welcome .popup-subtitle {
   width: 70%;
   margin-inline: auto;
 }
 
-.christmas button {
+.welcome button {
   width: 331px;
 }
 
@@ -489,5 +489,18 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* WELCOME MOBILE */
+  .welcome img {
+    margin-top: -60px;
+  }
+  .welcome .popup-title,
+  .welcome .popup-subtitle {
+    width: 80%;
+    max-width: 250px;
+  }
+  .welcome button {
+    width: 240px;
   }
 }
