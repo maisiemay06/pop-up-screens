@@ -86,6 +86,9 @@ export default function Calendar() {
           >
             i've just booked a Meeow
           </button>
+          <button onClick={() => openPopup("Christmas", "white")}>
+            Happy Christmas
+          </button>
         </div>
       </div>
     </div>

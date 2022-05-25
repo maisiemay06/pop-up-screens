@@ -8,6 +8,7 @@ import SomeoneJoined from "./SomeoneJoined";
 import PreparingLIPost from "./PreparingLIPost";
 import PostedLI from "./PostedLI";
 import InviteFriends from "./InviteFriends";
+import Christmas from "./Christmas";
 
 export default function popup({
   closePopup,
@@ -50,7 +51,8 @@ export default function popup({
             ? "posting-linkedin"
             : ""
         }
-        ${content === "InviteFriends" ? "invite-friends" : ""}`}
+        ${content === "InviteFriends" ? "invite-friends" : ""}
+        ${content === "Christmas" ? "christmas" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         <p id="close-btn" onClick={closePopup}>
@@ -83,6 +85,7 @@ export default function popup({
           {content === "InviteFriends" && (
             <InviteFriends closePopup={closePopup} />
           )}
+          {content === "Christmas" && <Christmas closePopup={closePopup} />}
         </div>
       </motion.div>
     </motion.div>

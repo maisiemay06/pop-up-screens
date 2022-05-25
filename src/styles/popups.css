@@ -124,6 +124,7 @@
   margin-top: 40px;
   margin: auto;
   max-width: 468px;
+  line-height: 1.8rem;
 }
 
 .popup a {
@@ -327,6 +328,38 @@
   background-color: #04cccc;
 }
 
+/* HAPPY CHRISTMAS POPUP */
+.christmas {
+  max-width: 500px;
+  max-height: 405px;
+  overflow: unset;
+}
+
+.christmas #close-btn {
+  display: none;
+}
+
+.christmas img {
+  margin-top: -100px;
+  height: 168px;
+  width: 168px;
+  margin-bottom: 10px;
+}
+
+.christmas .popup-title {
+  margin-bottom: 20px;
+  width: 70%;
+  margin-inline: auto;
+}
+.christmas .popup-subtitle {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.christmas button {
+  width: 331px;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1400px) {
   .popup {
@@ -335,6 +368,11 @@
   }
   .popup #close-btn {
     right: -8px;
+  }
+
+  .share-linkedin {
+    height: 75vh;
+    width: 75vw;
   }
   .share-linkedin #close-btn {
     right: 0;
