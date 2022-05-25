@@ -418,11 +418,11 @@
   .popup {
     height: auto;
     width: 310px;
-    padding-block: 35px;
+    padding: 35px 10px;
   }
-  #close-btn {
+  .popup #close-btn {
     top: -30px;
-    right: -20px;
+    right: 5px;
   }
   .popup-wht .popup-title {
     max-width: 190px;
@@ -500,7 +500,6 @@
   }
   .share-linkedin #close-btn {
     color: #fff;
-    right: -10px;
   }
   .popup-joined .image-container {
     margin-left: -25px;
@@ -519,19 +518,24 @@
   }
 
   /* WELCOME MOBILE */
+
   .welcome img {
     margin-top: -60px;
+    height: 120px;
   }
   .welcome .images img {
     margin-top: -10px;
-    height: 80px;
+    height: 110px;
+  }
+  .welcome .smaller-img {
+    height: 100px;
   }
   .welcome .popup-title,
   .welcome .popup-subtitle {
-    width: 80%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 300px;
   }
   .welcome button {
-    width: 240px;
+    width: auto;
   }
 }

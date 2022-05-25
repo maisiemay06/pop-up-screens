@@ -60,6 +60,9 @@ export default function Calendar() {
       </div>
       {/* BELOW BUTTONS FOR DEMO PURPOSES ONLY */}
       <div className="demo-buttons">
+        <button onClick={() => openPopup("BookedMeeow", "blue")}>
+          booked a Meeow
+        </button>
         <button onClick={() => openPopup("MeeowStarting", "white")}>
           next Meeow starting
         </button>
@@ -71,6 +74,9 @@ export default function Calendar() {
         </button>
         <button onClick={() => openPopup("NoOneThere", "white")}>
           no one there
+        </button>
+        <button onClick={() => openPopup("InviteFriends", "white")}>
+          tell a friend
         </button>
         <button
           onClick={() =>
