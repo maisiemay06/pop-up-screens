@@ -6,7 +6,8 @@ export default function WelcomeBookBud({ closePopup }) {
       <img src={Image440} alt="" />
       <div className="popup-text">
         <h2 className="popup-title">
-          Don't forget the Book Buddies
+          Don't forget the
+          <br /> Book Buddies
           <br />
           Jeremy Anthony!
         </h2>
