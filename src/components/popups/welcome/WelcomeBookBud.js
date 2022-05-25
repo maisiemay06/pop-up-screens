@@ -1,6 +1,6 @@
 import Image440 from "../../../imgs/Image440.png";
 
-export default function Welcome2({ closePopup }) {
+export default function WelcomeBookBud({ closePopup }) {
   return (
     <>
       <img src={Image440} alt="" />

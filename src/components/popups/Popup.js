@@ -8,15 +8,15 @@ import SomeoneJoined from "./SomeoneJoined";
 import PreparingLIPost from "./PreparingLIPost";
 import PostedLI from "./PostedLI";
 import InviteFriends from "./InviteFriends";
-import Welcome from "./welcome/Welcome";
-import Welcome2 from "./welcome/Welcome2";
-import Welcome3 from "./welcome/Welcome3";
-import Welcome4 from "./welcome/Welcome4";
-import Welcome5 from "./welcome/Welcome5";
-import Welcome6 from "./welcome/Welcome6";
-import Welcome7 from "./welcome/Welcome7";
-import Welcome8 from "./welcome/Welcome8";
-import Welcome9 from "./welcome/Welcome9";
+import WelcomeSeasonal from "./welcome/WelcomeSeasonal";
+import WelcomeBack from "./welcome/WelcomeBack";
+import WelcomeBack2 from "./welcome/WelcomeBack2";
+import WelcomeFirst from "./welcome/WelcomeFirst";
+import WelcomeTellFriend from "./welcome/WelcomeTellFriend";
+import WelcomeFeedback from "./welcome/WelcomeFeedback";
+import Welcome3Week from "./welcome/Welcome3Week";
+import WelcomeBookBud from "./welcome/WelcomeBookBud";
+import WelcomeAmbassador from "./welcome/WelcomeAmbassador";
 
 export default function popup({
   closePopup,
@@ -61,18 +61,18 @@ export default function popup({
         }
         ${content === "InviteFriends" ? "invite-friends" : ""}
         ${
-          content === "Welcome" ||
-          content === "Welcome2" ||
-          content === "Welcome3" ||
-          content === "Welcome4" ||
-          content === "Welcome5" ||
-          content === "Welcome6" ||
-          content === "Welcome7" ||
-          content === "Welcome8" ||
-          content === "Welcome9"
+          content === "WelcomeSeasonal" ||
+          content === "WelcomeBack" ||
+          content === "WelcomeBack2" ||
+          content === "WelcomeFirst" ||
+          content === "WelcomeTellFriend" ||
+          content === "WelcomeFeedback" ||
+          content === "Welcome3Week" ||
+          content === "WelcomeBookBud"
             ? "welcome"
             : ""
-        }`}
+        }
+        ${content === "WelcomeAmbassador" ? "welcome ambassador" : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         <p id="close-btn" onClick={closePopup}>
@@ -105,15 +105,31 @@ export default function popup({
           {content === "InviteFriends" && (
             <InviteFriends closePopup={closePopup} />
           )}
-          {content === "Welcome" && <Welcome closePopup={closePopup} />}
-          {content === "Welcome2" && <Welcome2 closePopup={closePopup} />}
-          {content === "Welcome3" && <Welcome3 closePopup={closePopup} />}
-          {content === "Welcome4" && <Welcome4 closePopup={closePopup} />}
-          {content === "Welcome5" && <Welcome5 closePopup={closePopup} />}
-          {content === "Welcome6" && <Welcome6 closePopup={closePopup} />}
-          {content === "Welcome7" && <Welcome7 closePopup={closePopup} />}
-          {content === "Welcome8" && <Welcome8 closePopup={closePopup} />}
-          {content === "Welcome9" && <Welcome9 closePopup={closePopup} />}
+          {content === "WelcomeSeasonal" && (
+            <WelcomeSeasonal closePopup={closePopup} />
+          )}
+          {content === "WelcomeBack" && <WelcomeBack closePopup={closePopup} />}
+          {content === "WelcomeBack2" && (
+            <WelcomeBack2 closePopup={closePopup} />
+          )}
+          {content === "WelcomeFirst" && (
+            <WelcomeFirst closePopup={closePopup} />
+          )}
+          {content === "WelcomeTellFriend" && (
+            <WelcomeTellFriend closePopup={closePopup} />
+          )}
+          {content === "WelcomeFeedback" && (
+            <WelcomeFeedback closePopup={closePopup} />
+          )}
+          {content === "Welcome3Week" && (
+            <Welcome3Week closePopup={closePopup} />
+          )}
+          {content === "WelcomeBookBud" && (
+            <WelcomeBookBud closePopup={closePopup} />
+          )}
+          {content === "WelcomeAmbassador" && (
+            <WelcomeAmbassador closePopup={closePopup} />
+          )}
         </div>
       </motion.div>
     </motion.div>

@@ -1,6 +1,6 @@
 import Image439 from "../../../imgs/Image439.png";
 
-export default function Welcome7({ closePopup }) {
+export default function Welcome3Week({ closePopup }) {
   return (
     <>
       <img src={Image439} alt="" />

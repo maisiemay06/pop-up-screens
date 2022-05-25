@@ -1,6 +1,6 @@
 import Image436 from "../../../imgs/Image436.png";
 
-export default function Welcome2({ closePopup }) {
+export default function WelcomeBack({ closePopup }) {
   return (
     <>
       <img src={Image436} alt="" />

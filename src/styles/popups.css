@@ -332,7 +332,7 @@
 .welcome {
   max-width: 500px;
   height: auto;
-  max-height: 450px;
+  max-height: 600px;
   overflow: unset;
   padding-bottom: 50px;
 }
@@ -355,7 +355,6 @@
   margin-bottom: 20px;
 }
 .welcome .smaller-title {
-  font-size: 1.8rem;
   width: 75%;
   margin-inline: auto;
 }
@@ -367,7 +366,19 @@
 
 .welcome button {
   margin-top: 20px;
-  width: 331px;
+  width: auto;
+  padding: 0 50px;
+}
+
+.ambassador {
+  margin-top: 18vh;
+}
+.ambassador img {
+  margin: 30px 5px;
+  height: 160px;
+}
+.ambassador .popup-title {
+  width: 90%;
 }
 
 /* MEDIA QUERIES */
@@ -381,8 +392,8 @@
   }
   .welcome {
     max-width: 500px;
-    height: 450px;
-    max-height: 450px;
+    height: auto;
+    max-height: 500px;
     overflow: unset;
   }
 
@@ -510,6 +521,10 @@
   /* WELCOME MOBILE */
   .welcome img {
     margin-top: -60px;
+  }
+  .welcome .images img {
+    margin-top: -10px;
+    height: 80px;
   }
   .welcome .popup-title,
   .welcome .popup-subtitle {

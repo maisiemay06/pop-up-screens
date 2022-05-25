@@ -88,30 +88,32 @@ export default function Calendar() {
         </button>
       </div>
       <div className="welcome-buttons demo-buttons">
-        <button onClick={() => openPopup("Welcome", "white")}>Welcome 1</button>
-        <button onClick={() => openPopup("Welcome2", "white")}>
-          Welcome 2
+        <button onClick={() => openPopup("WelcomeSeasonal", "white")}>
+          Welcome Seasonal
         </button>
-        <button onClick={() => openPopup("Welcome3", "white")}>
-          Welcome 3
+        <button onClick={() => openPopup("WelcomeBack", "white")}>
+          Welcome Back
         </button>
-        <button onClick={() => openPopup("Welcome4", "white")}>
-          Welcome 4
+        <button onClick={() => openPopup("WelcomeBack2", "white")}>
+          Welcome Back 2
         </button>
-        <button onClick={() => openPopup("Welcome5", "white")}>
-          Welcome 5
+        <button onClick={() => openPopup("WelcomeFirst", "white")}>
+          Welcome First
         </button>
-        <button onClick={() => openPopup("Welcome6", "white")}>
-          Welcome 6
+        <button onClick={() => openPopup("WelcomeTellFriend", "white")}>
+          Welcome Tell Friend
         </button>
-        <button onClick={() => openPopup("Welcome7", "white")}>
-          Welcome 7
+        <button onClick={() => openPopup("WelcomeFeedback", "white")}>
+          Welcome Feedback
         </button>
-        <button onClick={() => openPopup("Welcome8", "white")}>
-          Welcome 8
+        <button onClick={() => openPopup("Welcome3Week", "white")}>
+          Welcome 3 a Week
         </button>
-        <button onClick={() => openPopup("Welcome9", "white")}>
-          Welcome 9
+        <button onClick={() => openPopup("WelcomeBookBud", "white")}>
+          Welcome Book Buddies
+        </button>
+        <button onClick={() => openPopup("WelcomeAmbassador", "white")}>
+          Welcome Ambassador
         </button>
       </div>
     </div>
