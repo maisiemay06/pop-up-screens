@@ -483,15 +483,8 @@
   .mob-only {
     display: block;
   }
-
   .popup-joined button {
     background-color: var(--accent-blue);
-  }
-  .popup-joined a {
-    display: block;
-    color: #fff;
-    text-decoration: underline;
-    width: 100%;
   }
   .popup-joined img {
     height: 80%;
