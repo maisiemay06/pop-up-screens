@@ -17,6 +17,7 @@ import WelcomeFeedback from "./welcome/WelcomeFeedback";
 import Welcome3Week from "./welcome/Welcome3Week";
 import WelcomeBookBud from "./welcome/WelcomeBookBud";
 import WelcomeAmbassador from "./welcome/WelcomeAmbassador";
+import WelcomeOpportunity from "./welcome/WelcomeOpportunity";
 
 export default function popup({
   closePopup,
@@ -68,7 +69,8 @@ export default function popup({
           content === "WelcomeTellFriend" ||
           content === "WelcomeFeedback" ||
           content === "Welcome3Week" ||
-          content === "WelcomeBookBud"
+          content === "WelcomeBookBud" ||
+          content === "WelcomeOpportunity"
             ? "welcome"
             : ""
         }
@@ -116,7 +118,7 @@ export default function popup({
             <WelcomeFirst closePopup={closePopup} />
           )}
           {content === "WelcomeTellFriend" && (
-            <WelcomeTellFriend closePopup={closePopup} />
+            <WelcomeTellFriend closePopup={closePopup} openPopup={openPopup} />
           )}
           {content === "WelcomeFeedback" && (
             <WelcomeFeedback closePopup={closePopup} />
@@ -129,6 +131,9 @@ export default function popup({
           )}
           {content === "WelcomeAmbassador" && (
             <WelcomeAmbassador closePopup={closePopup} />
+          )}
+          {content === "WelcomeOpportunity" && (
+            <WelcomeOpportunity closePopup={closePopup} />
           )}
         </div>
       </motion.div>

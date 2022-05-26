@@ -1,6 +1,6 @@
 import Image442 from "../../../imgs/Image442.png";
 
-export default function WelcomeTellFriend({ closePopup }) {
+export default function WelcomeTellFriend({ closePopup, openPopup }) {
   return (
     <>
       <img src={Image442} alt="" />
@@ -14,7 +14,13 @@ export default function WelcomeTellFriend({ closePopup }) {
           always someone new and interesting for you to meet is by spreading the
           word.
         </h4>
-        <button onClick={closePopup} id="join-meeow-btn">
+        <button
+          onClick={() => {
+            closePopup();
+            openPopup("InviteFriends", "white");
+          }}
+          id="join-meeow-btn"
+        >
           tell a friend about Meeow
         </button>
       </div>

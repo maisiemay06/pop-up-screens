@@ -7,7 +7,8 @@ export default function InviteFriends({ closePopup }) {
   const [invitesSent, setInvitesSent] = useState(false);
 
   function validateEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,6})+$/;
+    const regex =
+      /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,6})+$/;
     return regex.test(email);
   }
 
@@ -39,10 +40,10 @@ export default function InviteFriends({ closePopup }) {
       </p>
       <div className="invite-fields">
         <input type="email" placeholder="Friend 1" onChange={handleEmail} />
-        <input type="email" placeholder="Friend 2" />
-        <input type="email" placeholder="Friend 3" />
-        <input type="email" placeholder="Friend 4" />
-        <input type="email" placeholder="Friend 5" />
+        <input type="email" placeholder="Friend 2" onChange={handleEmail} />
+        <input type="email" placeholder="Friend 3" onChange={handleEmail} />
+        <input type="email" placeholder="Friend 4" onChange={handleEmail} />
+        <input type="email" placeholder="Friend 5" onChange={handleEmail} />
 
         {!invitesSent && (
           <button

@@ -121,6 +121,9 @@ export default function Calendar() {
         <button onClick={() => openPopup("WelcomeAmbassador", "white")}>
           Welcome Ambassador
         </button>
+        <button onClick={() => openPopup("WelcomeOpportunity", "white")}>
+          Welcome Opportunity
+        </button>
       </div>
     </div>
   );
